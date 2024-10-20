@@ -1,0 +1,3 @@
+- Buildings are built from segments
+- They are attacked at specific places
+- They have floors governing accesibility.
