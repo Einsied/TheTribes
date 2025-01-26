@@ -1,0 +1,3 @@
+# Ignore everything in produced by LaTeX, except the file itself
+cultures_like.*
+!cultures_like.tex
