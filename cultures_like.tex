@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{book}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,6 +7,9 @@
 
 \newcommand{\Author}{Sebastian Einsiedler}
 \newcommand{\Title}{Settlers or cultrues like game}
+
+\title{\Title}
+\author{\Author}
 
 \usepackage{amsmath, amssymb}
 \usepackage{enumerate}
@@ -24,6 +27,7 @@
 	filecolor = {red!50!black},
 	urlcolor = {blue!75!black}
 }
+\usepackage{csquotes}
 
 \usepackage{footnotebackref}
 \usepackage{booktabs}
@@ -31,38 +35,39 @@
 \usepackage[singlespacing]{setspace}
 \usepackage[toc]{glossaries}
 
-\makeglossaries
+\makeglossaries{}
+
 \newglossaryentry{Vikings}{
-	name=the children of the spirits,
+	name=children of the spirits,
 	description={simple nature loving craftsmen,
 		with a strong connection to the land and nature that surrounds them}
 }
 \newglossaryentry{Nomads}{
-	name=the mounted men,
+	name=mounted men,
 	description={fierce warriors and raiders, that raise large herds and conquer their foes
 		on the back of their mounts with their cruel gods and the wind in their back}
 }
 \newglossaryentry{Egyptians}{
-	name=the river folk,
+	name=river folk,
 	description={erect great monuments within fertile river plains.
 	They fight for the glory of their kings and an immortal afterlife.}
 }
 \newglossaryentry{Aztecs}{
-	name=the servants of the serpent,
+	name=servants of the serpent,
 	description={need to feed the sky serpent with human sacrifice so it can then be
 		consumed by sun.
 		Born from corn and water they are constantly on the search for new sacrifices.
 		For the serpent hungers and if you do not feed it, it will consume you}
 }
 \newglossaryentry{Japanese}{
-	name=the empire,
+	name=empire,
 	description={lies within the fertile plains-
 		Its peasants grow rice, its craftsman forge tools and weapons,
 		so its priest and artists can create great works for the celestial dragons.
 		Its warriors defend the borders with bow, katana and musket against all invaders}
 }
 \newglossaryentry{Romans}{
-	name=the republics,
+	name=republics,
 	description={stand against the gods.
 	Where other chose slavery in the face of the supernatural the republics chose industry and science.
 	Heavily armored its legions advance towards its enemy,
@@ -74,20 +79,19 @@
 
 \begin{document}
 
-% Title
-\begin{center}
-	\begin{large}
-		\Title
-	\end{large}
+\maketitle
 
-\Author
+\tableofcontents
 
-\today
-\end{center}
+\chapter{The tribes}
+This chapter describes the different human factions inhabiting the world.
+It describes their economy, religion culture and play-style.
+Each faction is centred around a unique play-style with partly overlapping good production,
+with the other factions.
 
 \section{\Gls{Vikings}}
 
-	Deep within the woods, the blooming meadows live \gls{Vikings}.
+	Deep within the woods, the blooming meadows live the \gls{Vikings}.
 	They have a close connection to nature and its spirits,
 	which they venerate in special sanctuaries.
 
@@ -158,7 +162,7 @@
 				of the sanctuary.
 				A bear appears to defend the inner circle of the sanctuary.
 				Boars and deer appear in its inner circle regularly.
-				Great druids can use the spell "Animal kinship"\footnote{
+				Great druids can use the spell \textquote{Animal kinship}\footnote{
 					Creates a number of boars and deer at the place.
 				} once this level is reached.
 
@@ -167,7 +171,7 @@
 				Wisps start appearing confusing and stunning enemies walking into the inner circle
 				of the sanctuary.
 				The wisps also leave gits of mushrooms and herbs at the center of the sanctuary.
-				Great druids can use the spell "Wisp lights"\footnote{
+				Great druids can use the spell \textquote{Wisp lights}\footnote{
 					A few lights appear stunning enemy soldiers.
 				} once this level is reached.
 
@@ -178,7 +182,7 @@
 				He also delivers the dead-wood of the forest as timber to its center.
 				Thorns fill out the entire inner circle of the forest,
 				injuring all enemies that walk upon it.
-				Great druids can use the spell "The forests revenge"\footnote{
+				Great druids can use the spell \textquote{The forests revenge}\footnote{
 				Trees within the area of the spell awakened.
 				They maul close enemies and throw branches at them over a short distance.
 				} once this level is reached.
@@ -193,7 +197,7 @@
 				From these blooming flowers the druids can harvest the enchanted petals{
 					Enchanted petals are just magic resource, not a special good.
 				}.
-				Great Druid can use the spell "Spring"\footnote{
+				Great Druid can use the spell \textquote{Spring}\footnote{
 					A bunch of flowers appear.\footnote{
 						Since this is the only way besides the sanctuary to create flowers
 						it is a convenient way to either level it up faster or
@@ -204,7 +208,7 @@
 			\paragraph{Level 1: Flower fields}
 				A wild bull appears defending the inner circle of the sanctuary.
 				The grass grows lusher and sheep and oxen grow faster on the meadow.
-				Great druids can use the spell "The great shedding"\footnote{
+				Great druids can use the spell \textquote{The great shedding}\footnote{
 					All sheep in the area of the spell immediately produce two units of wool.
 				} once this level is reached.
 
@@ -213,7 +217,7 @@
 				They can turn enemies into sheep for a short duration.
 				They also assist the bees collecting honey,
 				while shearing the sheep delivering honey and wool to the center of the sanctuary.
-				Great druids can use the spell "Bee hive"\footnote{
+				Great druids can use the spell \textquote{Bee hive}\footnote{
 					A swarm of bee appears and chases enemies in a random direction,
 					while doing minor damage to them.
 				} once this level is reached.
@@ -225,7 +229,7 @@
 				sanctuary.
 				Once the herd grows above a certain size unicorns will join the \gls{Vikings}
 				as mount to defend the spirits.
-				Great druids can use the spell "Unicorn stampede"\footnote{
+				Great druids can use the spell \textquote{Unicorn stampede}\footnote{
 					Calls a herd of unicorns from the spirit realm,
 					that trample from the position of the great druid
 					in the direction of the spell.
@@ -245,7 +249,7 @@
 				From willows the and rough seas the druids can bottle wailing{
 					Bottled wailing is just magic resource, not a special good.
 				}.
-				Great Druid can use the spell "Rich fishing grounds"\footnote{
+				Great Druid can use the spell \textquote{Rich fishing grounds}\footnote{
 					The number of fish in the water increases,
 				} once the sanctuary was established.
 
@@ -255,16 +259,16 @@
 				}
 				and only kept in the balance by a large shark that circles it within the inner circle.
 				In the swamp within the inner circle a giant toad preys on the enemies of the \gls{Vikings}.
-				Great Druid can use the spell "Salty catch"\footnote{
+				Great Druid can use the spell \textquote{Salty catch}\footnote{
 					Used on the coast, it creates a bunch of salt and fish.
 				} once this level is reached.
 
 			\paragraph{Level 2: Undersea harbor}
 				The spirits of the sea walk on the land.
 				Within the inner sanctuary a guard of fish-men defends the sanctuary
-				with their spears fashioned from (whale)bone.
+				with their spears fashioned from (whale)-bone.
 				They gift the druids gold in exchange for their stories.
-				Great Druid can use the spell "Wet warriors"\footnote{
+				Great Druid can use the spell \textquote{Wet warriors}\footnote{
 					Used on the coast it calls a few fish-men,
 					that attack nearby enemies before retreating back into the depths.
 				} once this level is reached.
@@ -276,9 +280,9 @@
 				she will graciously accept a few of them as her new honor-guard.
 				They will defend her against their former comrades until they die of
 				starvation.
-				She will also gift a mithril sword to the \gls{Vikings} from time to time
+				She will also gift a Mithril sword to the \gls{Vikings} from time to time
 				to thank them for the protection of the sanctuary.
-				Great Druid can use the spell "Sirens song"\footnote{
+				Great Druid can use the spell \textquote{Sirens song}\footnote{
 					Used on the coast it calls all enemies towards the shore,
 					where they strip themselves of weapons and armor
 					and start to swim towards the siren until they drown.
@@ -296,7 +300,7 @@
 				The light of this crystals can be harvested by the druids{
 					This yields magic resource.
 				}.
-				Great Druid can use the spell "The bones of the earth "\footnote{
+				Great Druid can use the spell \textquote{The bones of the earth}\footnote{
 					A bunch of rocks appear in the target area.footnote{
 						These can be harvested for stone.
 					}
@@ -307,7 +311,7 @@
 				It attacks all enemies of the \gls{Vikings}.
 				Carved-Rocks covered in crystals, explode after a time,
 				yielding a small amount of stone.
-				Great Druid can use the spell "Riches of the mountain king"\footnote{
+				Great Druid can use the spell \textquote{Riches of the mountain king}\footnote{
 					The resources of mines in the area are increased by a small amount.
 				} once this level is reached.
 
@@ -316,7 +320,7 @@
 				With his mighty pick the troll not only keeps the inner circle save of invaders,
 				but also mines the occasional piece of copper ore from the crystals depositing it its hoard
 				in the center of the sanctuary.
-				Great Druid can use the spell "You shall be stone"\footnote{
+				Great Druid can use the spell \textquote{You shall be stone}\footnote{
 					Turns a small amount of enemies and their weapons permanently into stone/rocks.
 					So the houses of the \gls{Vikings} can be built from their enemies.
 				} once this level is reached.
@@ -343,7 +347,7 @@
 				which can be collected by the druids\footnote{
 					Spirit embers are magical resource not a special good.
 				}.
-				Great Druid can use the spell "Wonderful harvest"\footnote{
+				Great Druid can use the spell \textquote{Wonderful harvest}\footnote{
 					A bunch of ready to harvest wheat appears.
 				} once the sanctuary was established.
 
@@ -352,7 +356,7 @@
 				Their mocking distracts enemies stopping them from attacking.
 				All shops and fields passed by the spirits gain a production boost.
 				If the spirits pass an empty pigsty or chicken-pen a pig or chicken appears in it.
-				Great Druid can use the spell "Spirits gifts"\footnote{
+				Great Druid can use the spell \textquote{Spirits gifts}\footnote{
 					A bunch of clothes and bread appear.
 				} once this level is reached.
 
@@ -364,7 +368,7 @@
 				During the day a burning knight walks through the inner circle of the sanctuary.
 				Ready to defend it against invaders.
 				At dusk the knight turns into a few units of coal. 
-				Great Druid can use the spell "Black rider"\footnote{
+				Great Druid can use the spell \textquote{Black rider}\footnote{
 					A black ghostly rider appears.
 					Slaying one enemy, causing nearby enemies to flee in panic.
 				} once this level is reached.
@@ -375,7 +379,7 @@
 				}.
 				From time to time the armors are remade by the sanctuary leaving their
 				components behind for the warriors of the \gls{Vikings}.
-				Great Druid can use the spell "The great bell"\footnote{
+				Great Druid can use the spell \textquote{The great bell}\footnote{
 					A giant bell tolls three times shattering walls beneath it.
 				} once this level is reached.
 
@@ -452,11 +456,11 @@
 				A swarm of crows takes the offered mounts up into the skies.
 				Multiple swarms of crows defend the temple attacking all enemies that come
 				close doing small to medium damage.
-				The boon of this level is "Wind in our backs"\footnote{
+				The boon of this level is \textquote{Wind in our backs}\footnote{
 					Mounted warriors ride faster for a while after being affected
 					by this spell.
 				},
-				its curse is "Murder of crows"\footnote{
+				its curse is \textquote{Murder of crows}\footnote{
 					A swarm of crows appears and can be controlled by the player for a time.
 					While they can damage enemies they might be better suited as scouts.
 				}.
@@ -465,10 +469,10 @@
 				A swarm of harpies appears and harasses all enemies that come close to the temple.
 				They do not only damage them but also sometimes stun them with their shrieks.
 				The mounts are now collected by a giant bird.
-				The boon of this level is "Long arrows"\footnote{
+				The boon of this level is \textquote{Long arrows}\footnote{
 					Affected bowmen get a significant range increase.
 				},
-				its curse is "Winds of change"\footnote{
+				its curse is \textquote{Winds of change}\footnote{
 					A strong wind starts to blow destroying trees and crops below it.
 				}.
 
@@ -476,14 +480,14 @@
 				A giant bird appears on the temple to feasts on the mounts.
 				It flies off to attack enemies in the direct vicinity of the temple.
 
-				The boon of this level is "Great hunt"\footnote{
+				The boon of this level is \textquote{Great hunt}\footnote{
 					Mounted warriors affected by this spell,
 					start to fly for a short while,
 					permitting them to cross seas, mountains and city walls.
 					They land once the stand still and there is a place to land nearby.
 					If the spell wears off and there is no landing place they keep flying.
 				},
-				its curse is "Great talons"\footnote{
+				its curse is \textquote{Great talons}\footnote{
 					A giant bird appears and destroys whatever is under it,
 					be it trees, city walls or small enemy armies.
 				}.
@@ -497,10 +501,10 @@
 				A group of wild bulls patrols the area around the temple attacking
 				all enemies.
 				Wild cattle spawn next to it.
-				The boon of this level is "Gifts of mother earth"\footnote{
+				The boon of this level is \textquote{Gifts of mother earth}\footnote{
 					People affected by this spell will loose hunger,
 				},
-				its curse is "Tremor"\footnote{
+				its curse is \textquote{Tremor}\footnote{
 					Affected people will be stunned by the shacking earth.
 					Buildings will be lightly damaged.
 				}.
@@ -508,10 +512,10 @@
 			\paragraph{Level 2: Shrine of the Minotaur}
 				A Minotaur guard appears to defend the temple.
 				Wild mounts spawn next to the temple.
-				The boon of this level is "Fertility"\footnote{
+				The boon of this level is \textquote{Fertility}\footnote{
 					A few of the affected cattle and mounts immediately procreate.
 				},
-				its curse is "Curse of the horns"\footnote{
+				its curse is \textquote{Curse of the horns}\footnote{
 					A group of enemies is temporary turned into cattle,
 					leaving their equipment on the ground\footnote{
 						This means once the spell ends they are still disarmed.
@@ -521,14 +525,14 @@
 			\paragraph{Level 3: Hall of the horned king}
 				A Minotaur chieftain moves into the temple defending it
 				and occasionally eating close by cattle.
-				The boon of this level is "Blessing of the horns"\footnote{
+				The boon of this level is \textquote{Blessing of the horns}\footnote{
 					A group of people sheds all their armor and humanity.
 					They are turned into Minotaur, giving them twice the strength
 					and appetite for meat.
 					The lack of protection they compensate with their speed and the additional
 					power of their blows against the enemies.
 				},
-				its curse is "Thunder on the plains"\footnote{
+				its curse is \textquote{Thunder on the plains}\footnote{
 					A bunch of ethereal cattle appears and trampling and injuring everyone in their path.
 				}.
 
@@ -543,12 +547,12 @@
 				The sanctuary can be worshiped by the \gls{Nomads}.
 				This will let them carry favor with the sun.
 				Around the temple sun-rays blind enemies, stunning them shortly.
-				The boon of this level is "Healing ray"\footnote{
+				The boon of this level is \textquote{Healing ray}\footnote{
 					The sun is benevolent.
 					Once it touches the wounds of your warriors they will magically heal.
 					Praise the sun.
 				},
-				its curse is "Exhausting heat"\footnote{
+				its curse is \textquote{Exhausting heat}\footnote{
 					The sun burns down on your enemies, drenching all the sweat from their body.
 					This will slow them and their mounts down significantly.
 				}.
@@ -558,13 +562,13 @@
 				These will defend the temple with their cooper swords, spears and shields.
 				Once a certain number of snake-humanoids is reached all further converted
 				worshipers will join the armed forces of the \gls{Nomads} instead.
-				The boon of this level is "Feathered mounts"\footnote{
+				The boon of this level is \textquote{Feathered mounts}\footnote{
 					The sun sends down mounts from a forgotten time\footnote{
 						Terror-birds/raptors
 					}.
 					Those are not only faster than your mounts they can also bite the enemies had clear off.
 				},
-				its curse is "Curse of the scale"\footnote{
+				its curse is \textquote{Curse of the scale}\footnote{
 					A few warriors\footnote{
 						foreign or domestic, the sun shines on all equally
 					} drop their armor and weapons and turn into beasts from a forgotten time.
@@ -574,7 +578,7 @@
 			\paragraph{Level 3: Temple of the blinding empress}
 				A T-Rex appears and patrols around the temple.
 				It attacks all enemies of the \gls{Nomads} that dare to venture close.
-				The boon of this level is "Great beasts of burden"\footnote{
+				The boon of this level is \textquote{Great beasts of burden}\footnote{
 					The sun sends down great beasts of burden from a forgotten time\footnote{
 						Large herbivore dinosaurs.
 					}.
@@ -583,7 +587,7 @@
 						This is essentially an upgrade that permits production on the move.
 					}.
 				},
-				its curse is "Will of the sun"\footnote{
+				its curse is \textquote{Will of the sun}\footnote{
 					The sun shows its face and basks the area in its glory.
 					Every living creature in the center of the spell is immolated.
 					All burnable things catch fire.
@@ -652,7 +656,7 @@
 	leading to an agriculture that is strongly reliant on irrigation.
 	While they may farm of simple fertile soil their yields can be drastically 
 	increased by irrigation.
-	To facilitate the irrigation they build "Shrines" next to a body of sweet water.
+	To facilitate the irrigation they build \textquote{Shrines} next to a body of sweet water.
 	Within the shrine resides a singular priest and their assistant.
 	The assistant uses a shovel to dig the ditches and maintain them.
 	The priest supervises the work and prays for the blessing of the local river.
@@ -759,7 +763,7 @@
 			Within it \gls{Egyptians} celebrate the glorious rule of their current monarch.
 			To do this in the appropriate fashion they require food, dates and copious amounts of beer\footnote{
 				The only necessary resource is beer. All other can be supplied independently.
-				Every resource increases the glory by 20\%  supplying all gives another 20\% .
+				Every resource increases the glory by 20\% supplying all gives another 20\%.
 			}.
 			Since the celebrations can become quite rowdy the furniture also needs replacement from time
 			to time.
@@ -1003,6 +1007,7 @@
 		of their kingdom crushing everything in their path.
 
 \section{\Gls{Aztecs}}
+
 	In the deep jungles \gls{Aztecs} erect their cities.
 	The pyramids built from giant stone blocks tower over wooden huts.
 	In front of the palaces and forts of the priestly aristocracy the massed of sweat 
@@ -1209,10 +1214,7 @@
 				He ensures the health and wellbeing of the serpent and administers the human sacrifices.
 				Every sacrifice helps the serpent to grow mightier and stronger,
 				while also improving its favor.
-				The residue it produces after every sacrifice is collected and used to fertilize the fields.
-
-				The serpent will grow until it fills out the entire pit,
-				afterwards it will begin to fast only eating stay alive.
+				The residue it produces after every sacrifiteleg stay alive.
 				During this juvenile form it is quite week.
 				It scales can be penetrated by hardened weapons thrust with sufficient force.
 				Its magic is limited to casting a thunderbolt from the sky next
