@@ -30,10 +30,12 @@
 \usepackage{csquotes}
 
 \usepackage{footnotebackref}
+\usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage[singlespacing]{setspace}
 \usepackage[toc]{glossaries}
+\usepackage{pdflscape}
 
 \makeglossaries{}
 
@@ -153,7 +155,7 @@ with the other factions.
 				Druids can harvest ancient bark from this trees\footnote{
 					Magic bark is just magic resource, not a special good.
 				}.
-				Great Druid can use the spell "Create forest"\footnote{
+				Great Druid can use the spell \textquote{Create forest}\footnote{
 					A small forest appears at the target area of the spell.
 				} once the sanctuary was established.
 
@@ -183,8 +185,8 @@ with the other factions.
 				Thorns fill out the entire inner circle of the forest,
 				injuring all enemies that walk upon it.
 				Great druids can use the spell \textquote{The forests revenge}\footnote{
-				Trees within the area of the spell awakened.
-				They maul close enemies and throw branches at them over a short distance.
+					Trees within the area of the spell awakened.
+					They maul close enemies and throw branches at them over a short distance.
 				} once this level is reached.
 
 		\subsubsection{Sanctuary of the meadows}
@@ -198,11 +200,10 @@ with the other factions.
 					Enchanted petals are just magic resource, not a special good.
 				}.
 				Great Druid can use the spell \textquote{Spring}\footnote{
-					A bunch of flowers appear.\footnote{
-						Since this is the only way besides the sanctuary to create flowers
-						it is a convenient way to either level it up faster or
-						get a mead production going.
-					}
+					A bunch of flowers appear.
+					Since this is the only way besides the sanctuary to create flowers
+					it is a convenient way to either level it up faster or
+					get mead production going.
 				} once the sanctuary was established.
 
 			\paragraph{Level 1: Flower fields}
@@ -329,7 +330,7 @@ with the other factions.
 				A mighty dragon takes the center of the sanctuary as its domain.
 				It defends the inner sanctuary with its flaming breath from invaders
 				and permits the druids to collect its iron scales once they shed.
-				Great Druid can use the spell "Dragons curse"\footnote{
+				Great Druid can use the spell \textquote{Dragons curse}\footnote{
 					Turns a small amount of enemies and their weapons permanently into copper-, gold- and iron-bars.
 				} once this level is reached.
 
@@ -398,7 +399,7 @@ with the other factions.
 		but are better of to use the spells of their great druids.
 		In the early game they can use their tool-smithy to forge axes and start raiding their neighbors,
 		before those build a working weapon production line.
-		For siege-warfare they rely on ladders and "The great bell"-spell.
+		For siege-warfare they rely on ladders and \textquote{The great bell}-spell.
 		With their ability to build longboats and upgrade their buildings from simple tents,
 		to huts, to wooden houses  and then to stone houses, they are quite static.
 		They usually defend themselves with palisades, wooden walls and towers and in the
@@ -517,9 +518,8 @@ with the other factions.
 				},
 				its curse is \textquote{Curse of the horns}\footnote{
 					A group of enemies is temporary turned into cattle,
-					leaving their equipment on the ground\footnote{
-						This means once the spell ends they are still disarmed.
-					}.
+					leaving their equipment on the ground.
+					This means once the spell ends they enemies still disarmed.
 				}.
 
 			\paragraph{Level 3: Hall of the horned king}
@@ -563,15 +563,14 @@ with the other factions.
 				Once a certain number of snake-humanoids is reached all further converted
 				worshipers will join the armed forces of the \gls{Nomads} instead.
 				The boon of this level is \textquote{Feathered mounts}\footnote{
-					The sun sends down mounts from a forgotten time\footnote{
-						Terror-birds/raptors
-					}.
-					Those are not only faster than your mounts they can also bite the enemies had clear off.
+					The sun sends down mounts from a forgotten time.
+					Those giant birds are not only faster than your mounts
+					they can also bite the enemies had clear off.
 				},
 				its curse is \textquote{Curse of the scale}\footnote{
-					A few warriors\footnote{
-						foreign or domestic, the sun shines on all equally
-					} drop their armor and weapons and turn into beasts from a forgotten time.
+					The sun shines on all equally, so these cure affects friend and foe alike.
+					A few warriors hit by its rays drop their armor and weapons,
+					before turning into beasts from a forgotten time.
 					These beast start attacking the closest people they find.
 				}.
 
@@ -579,13 +578,10 @@ with the other factions.
 				A T-Rex appears and patrols around the temple.
 				It attacks all enemies of the \gls{Nomads} that dare to venture close.
 				The boon of this level is \textquote{Great beasts of burden}\footnote{
-					The sun sends down great beasts of burden from a forgotten time\footnote{
-						Large herbivore dinosaurs.
-					}.
+					The sun sends down great beasts of burden from a forgotten time.
 					These can carry your tepees/yurts/wagons faster than normal mounts.
-					They can also carry saddles\footnote{
-						This is essentially an upgrade that permits production on the move.
-					}.
+					They can also carry saddles, carrying you craftsmen workshops,
+					permitting them to work while on the move.
 				},
 				its curse is \textquote{Will of the sun}\footnote{
 					The sun shows its face and basks the area in its glory.
@@ -718,8 +714,8 @@ with the other factions.
 	While they might be rather small in the beginning they keep rising\footnote{
 		They can upgrade their walls continually, without making them unusable.
 	}
-	until they are only rivaled by \gls{Romans}.
-	From there heir archers rain death upon their enemies
+	until they are only rivaled by the \gls{Romans}.
+	From there their archers rain death upon their enemies
 	until the army of \gls{Egyptians} is strong enough to beat their enemies on 
 	an open field.
 
@@ -1428,6 +1424,7 @@ with the other factions.
 % They have dirt walls, which are harder to destroy 
 % They sacrifice food and booze for magic spells
 % They are the boring all rounders.
+
 \section{\Gls{Romans}}
 % can consume all the luxury goods of the other people
 % Officers can create formations for the warriors around them
@@ -1438,6 +1435,94 @@ with the other factions.
 % They focus on good craftsmen and trade to grow an economy and large population.
 % Their theme is industrial might
 
+\newpage{}
+\begin{landscape}
+
+\section{Comparisons}
+For a short overview the tribes are summarized in a few tables.
+
+\subsection{Overview}
+These table compares the different tribes.
+They are not precise measurement but should help give a rough oversight.
+The entries range from 
+\textquote{lowest}
+\textquote{lower}
+\textquote{low}
+\textquote{medium}
+\textquote{high}
+\textquote{higher}
+and
+\textquote{highest}.
+
+\begin{longtable}{p{3cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.8cm}p{6.2cm}}
+	\toprule{}
+	Tribe 
+	& Area coverage\footnote{
+		This refers to the area necessary to build up the industry relative to 
+		other tribes.
+	} & Mobility
+	& Defensive strength & Offensive strength
+	& Economy complexity 
+	& Unique characteristic \\
+	\midrule{}
+	The \gls{Vikings}
+	& Highest & Medium
+	& Higher & Medium
+	& Hight
+	& Natural sanctuaries enforce environmental adoption
+	\\
+	The \gls{Nomads}
+	& Higher & Highest
+	& Lowest & High
+	& Lowest
+	& Completely mobile except for their temples
+	\\
+	The \gls{Egyptians}
+	& Lowest & Lowest
+	& Highest & Lower
+	& High
+	& Able to reanimate fallen soldiers
+	\\
+	The \gls{Aztecs}
+	& Lower & Low
+	& Lower & Lower
+	& Higher
+	& They participate in their economy as a resource
+	\\
+	The \gls{Japanese}
+	& Medium & Medium
+	& Medium & Medium
+	& Medium
+	& None
+	\\
+	The \gls{Romans}
+	& Higher & Medium
+	& Low & Highest
+	& Highest
+	& Atheists able to use the luxuries from all other tribes
+	\\
+	\bottomrule{}
+\end{longtable}
+
+% \subsection{Weapon technology}
+% Weapon technology comes to the tribes in two major ways.
+% The ability to fortify and the ability to work complex metals.
+% Additionally the usage of gun-powder separates the tribes from each other.
+
+% \begin{longtable}{p{3cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{6.0cm}}
+%	\toprule{}
+%	Tribe 
+%	& Walls
+%	& 
+%	\\
+%	\midrule{}
+%	The \gls{Vikings}
+%	\\
+%	\bottomrule{}
+%\end{longtable}
+
+\end{landscape}
+
 % # Notes
 % - Fortifications should be slow to build and tear down, so they feel more meaningful
 % and siege magic more mighty.
@@ -1446,6 +1531,23 @@ with the other factions.
 % - Having the option to start with customized starting towns/fortresses would permit player
 % to create a strategy up ahead. They might invest in an early keep or a large weapons industry
 % permitting them to rush. This should make matches more varied for experienced players.
+% 
+% Considering how much I enjoyed building and walking through cities in Spell force.
+% The campaign could be made similar. 
+% As an immortal the player character traverses the world recruiting randomly generated npcs.
+% Between the maps he only can take a limited number of people with him through the gate or in a ship.
+%
+% The people he leaves behind keep living their lives and the cities change and grow a little while the AI manages them. 
+% 
+% If the player built the cities well he returns to flourishing lands and can recruit the children of his former followers into his retinue to fight the next battle and shop for good equipment.
+% 
+% He can also trade with these cities.
+% This will result in a player created interactive world with mini quests and make the changes and threats more meaningful.
+% 
+% It is in some sense like X4 just with more RTS RPG elements.
+% (Forges leveling up overtime giving better equipment, supply and demand, legions of soldiers to recruit, blueprints for buildings to buy, new cultures to encounter etc.)
+% 
+% Food production also ties into this as the retinues hunger makes a settlement necessary and the available farmland limits the size of the final settlement.
 
 \printglossary{}
 \end{document}
