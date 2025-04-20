@@ -1,0 +1,29 @@
+Non-binding english translation below
+
+Urheberrechtserklärung
+
+Urheber: Sebastian Einsiedler
+Erstellungsdatums des Werks: 1.10.2024
+
+Dieses Werk unterliegt dem Deutschen Urheberrecht
+(Urheberrechtsgesetz https://www.gesetze-im-internet.de/urhg/index.html#BJNR012730965BJNE004101377).
+Es wird also durch die Charta der Grundrechte der Europäischen Union
+(Artikel 17 https://eur-lex.europa.eu/eli/treaty/char_2012/oj/eng)
+geschützt. 
+
+Die Verfielfältigung der Dokumentation ist gestattet.
+Die Reporoduktion oder Nutzung des Quellcodes,
+bedarf sofern keine gesetzlich Ausnahme besteht, der Zustimmung des Authors.
+
+
+Copyright declaration
+
+Creator: Sebastian Einsiedler
+Date of creation: 1st of October 2024
+
+The work is subject to German copyright.
+It is protected by the Charter of Fundamental Rights of the European Union.
+
+The reproduction of the documentation is permitted.
+The reproduction of the source-code requires the permission of the the author,
+unless a legal-exception applies.
