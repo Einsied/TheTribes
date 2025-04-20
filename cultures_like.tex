@@ -36,6 +36,54 @@
 \usepackage[singlespacing]{setspace}
 \usepackage[toc]{glossaries}
 \usepackage{pdflscape}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzset{
+	% The raw resources that renew like game or trees
+	raw_renewable/.style={
+		draw=green,rectangle
+	},
+	% The raw resources that are limited like ore or stone
+	raw_limited/.style={
+		draw=gray,rectangle
+	},
+	% The livestock
+	livestock/.style={
+		draw=red,rectangle
+	},
+	% The resources that are only obtained by farming
+	produce/.style={
+		draw=yellow,rectangle
+	},
+	% The intermediate products
+	intermediate/.style={
+		draw=blue,rectangle
+	},
+	% The building material
+	material/.style={
+		draw=black,rectangle
+	},
+	% The finished foods
+	food/.style={
+		draw=green!50!yellow,rectangle
+	},
+	% Normal goods
+	good/.style={
+		draw=purple,rectangle
+	},
+	% Normal goods
+	tool/.style={
+		draw=purple!50,rectangle
+	},
+	% The luxury goods
+	luxury/.style={
+		draw=yellow!50,rectangle
+	},
+	% Weapons
+	weapon/.style={
+		draw=red!50,rectangle
+	},
+}
 
 \makeglossaries{}
 
@@ -413,7 +461,98 @@ with the other factions.
 		They can also only farm on rare fertile soil and their yields are small compared to
 		other people.
 
+	\subsection{Resource-flow}
+		How the resources flow through the economy of the \gls{Vikings}.
+		These are organized according to the final product.
+
+		\autoref{meat}
+
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\node [raw_renewable] (Game) at (0,0) {Game};
+			\node [food] (Meat) [right=of Game] {Meat};
+			\draw [->] (Game) -- (Meat);
+		\end{tikzpicture}
+		\caption{Meat-production}\label{meat}
+	\end{figure}
+
+	\begin{tikzpicture}
+		\node [raw_renewable] (Herbs) at (0,1) {Herbs};
+		\node [raw_renewable] (Mushroom) at (0,2) {Mushroom};
+		\node [raw_renewable] (Fir Tree) at (0,3) {Fir Tree};
+		\node [raw_renewable] (Apple trees) at (0,4) {Apple tree};
+		\node [raw_renewable] (Chestnut trees) at (0,5) {Chestnut tree};
+		% Ores
+		\node [raw_limited] (Rock) at (0,7) {Rock};
+		\node [raw_limited] (Copper Vein) at (0,8) {Copper Vein};
+		\node [raw_limited] (Iron Vein) at (0,9) {Iron Vein};
+		\node [raw_limited] (Gold Vein) at (0,10) {Gold Vein};
+		\node [raw_limited] (Coal Vein) at (0,11) {Coal Vein};
+
+		% Livestock
+		\node [livestock] (Sheep) at (0,13) {Sheep};
+		\node [livestock] (Oxen) at (0,14) {Oxen};
+		\node [livestock] (Chicken) at (0,15) {Oxen};
+		\node [livestock] (Pig) at (0,16) {Oxen};
+
+		% Produce
+		\node [raw_renewable] (Grass) at (0,18) {Grass};
+		\node [produce] (Wheat) at (0,19) {Wheat};
+
+		% The sea
+		\node [raw_renewable] (The sea) at (0,21) {Game};
+
+
+		\node [food] (Meat) at (5,0) {Meat};
+		\node [food] (Fish) at (5,0) {Meat};
+		\node [intermediate] (Flour) at(5,0) {Meat};
+		\node [material] (Lumber) at(5,0) {Lumber};
+		\node [material] (Boards) at(5,0) {Boards};
+		\node [material] (Stones) at(5,0) {Stones};
+		\node [tool] (Ax) at(5,0) {Ax};
+		\node [good] (Medicine) at (5,1) {Medicine};
+		\node [food] (Flavoured mead) at (5,2) {Flavoured mead};
+		\node [food] (Mushroom ale) at (5,3) {Mushroom ale};
+		\node [luxury] (Jewelry) at (5,4) {Jewelry};
+		\node [luxury] (Drinking horns) at (5,5) {Drinking horn};
+		\node [luxury] (Pillow) at (5,6) {Pillow};
+		\node [good] (Woolen clothes) at (5,7) {Woolen cloth};
+		\node [good] (Candles) at (5,8) {Candles};
+		\node [good] (Shoes) at (5,9) {Shoes};
+		\node [good] (Wooden Tools) at (5,10) {Wooden Tools};
+		\node [good] (Metal Tools) at (5,11) {Metal Tools};
+		\node [food] (Bread) at (5,12) {Bread};
+		\node [food] (Chestnut pie) at (5,13) {Chestnut pie};
+		\node [food] (Apple pie) at (5,14) {Apple pie};
+
+		\node [weapon] (Copper battle ax) at (15,0) {Copper battle Ax};
+		\node [weapon] (Iron battle ax) at (15,1) {Iron battle Ax};
+		\node [weapon] (Copper spear) at (15,2) {Copper spear};
+		\node [weapon] (Iron spear) at (15,3) {Iron spear};
+		\node [weapon] (Copper sword) at (15,4) {Copper sword};
+		\node [weapon] (Iron sword) at (15,5) {Iron sword};
+		\node [weapon] (Short bow) at (15,6) {Short bow};
+		\node [weapon] (Medium wooden shield) at (15,7) {Medium wooden shield};
+		\node [weapon] (Medium copper shield) at (15,8) {Medium copper shield};
+		\node [weapon] (Medium iron shield) at (15,9) {Medium iron shield};
+		\node [weapon] (Leather armor) at (15,10) {Leather armor};
+		\node [weapon] (Light copper armor) at (15,11) {Light copper armor};
+		\node [weapon] (Light iron armor) at (15,12) {Light iron armor};
+		\node [weapon] (Leather caps) at (15,13) {Leather caps};
+		\node [weapon] (Copper helmets) at (15,14) {Copper helmets};
+		\node [weapon] (Iron helmets) at (15,15) {Iron helmets};
+		\node [weapon] (Copper horned helmets) at (15,16) {Copper horned helmets};
+		\node [weapon] (Iron horned helmets) at (15,17) {Iron horned helmets};
+
+		%\draw [<-] (Game) -- (Meat);
+	\end{tikzpicture}
+
 \section{\Gls{Nomads}}
+
+	\begin{flushright}
+		\emph{The mount below, the wind behind, ahead the enemy.}
+	\end{flushright}
 
 	Among the cruel sun of the endless steps live the \gls{Nomads} in their tepees and yurts.
 	All expect their holy places can be move\footnote{
