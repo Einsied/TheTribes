@@ -28,6 +28,8 @@ if [ "$1" = "-c" ]; then
 	rm "$project_name".gls
 	rm "$project_name".ist
 	rm "$project_name".out
-	rm "$project_name".glo*
+	rm "$project_name".*glo
+	rm "$project_name".*glg
+	rm "$project_name".*gls
 	rm "$project_name".tpc
 fi
