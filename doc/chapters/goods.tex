@@ -17,14 +17,14 @@ example. In the following list all special plants will be listed with the
 
 \begin{longtable}{llllll}
 	\toprule
-	Plant         & Fruit    & Harvest  & Biome             & Growth & Abundance \\
+	Plant         & Fruit    & Harvest        & Biome             & Growth & Abundance \\
 	\midrule
-	Herb          & None     & Herbs    & Forest            & High   & Low       \\
-	Mushroom      & None     & Mushroom & Forest            & Medium & Low       \\
-	Fir           & None     & Timber   & Forest            & Low    & High      \\
-	Oak           & None     & Timber   & Forest, Grassland & Lowest & Lower     \\
-	Apple-tree    & Apple    & Timber   & Forest, Grassland & Lower  & Lower     \\
-	Chestnut-tree & Chestnut & Timber   & Forest, Grassland & Lower  & Lower     \\
+	Herb          & None     & \Gls{Herb}     & Forest            & High   & Low       \\
+	Mushroom      & None     & \Gls{Mushroom} & Forest            & Medium & Low       \\
+	Fir           & None     & \Gls{Timber}   & Forest            & Low    & High      \\
+	Oak           & None     & \Gls{Timber}   & Forest, Grassland & Lowest & Lower     \\
+	Apple-tree    & Apple    & \Gls{Timber}   & Forest, Grassland & Lower  & Lower     \\
+	Chestnut-tree & Chestnut & \Gls{Timber}   & Forest, Grassland & Lower  & Lower     \\
 	\bottomrule
 \end{longtable}
 
@@ -45,7 +45,7 @@ Mushrooms, herbs and other plants follow a similar principle.
 
 \paragraph{Herbs}
 Within the forest medicinal herbs grow. These are can also be used as a food
-additive.
+additives.
 
 \paragraph{Mushromm}
 Mushrooms grow within the forest and can be used for medical purposes or as
@@ -124,7 +124,7 @@ Gold is a rare metal used for luxury items and sometimes buildings.
 \paragraph{Coal}
 Coal can be mined and used for smelting metals.
 
-\section{Building materials}
+\section{Building materials}\label{ch:Goods:Materials}
 The different \hyperref[ch:Tribes]{tribes} build with various materials. These
 come into different categories like stone and quality levels, so we can have
 stones, stone blocks, polished stone blocks and engraved stone blocks. Quality
@@ -139,10 +139,10 @@ the lower quality material can be returned.
 Let us now take a look at the different material and quality levels.
 \begin{longtable}{ccccc}
 	\toprule
-	Material & Level 1 & Level 2     & Level 3        & Level 4        \\
+	Material & Level 1      & Level 2     & Level 3        & Level 4        \\
 	\midrule
-	Rock     & Stone   & Stone block & Polished block & Engraved block \\
-	Wood     & Timber  & Lumber      & Boards         & Painted Boards \\
+	Rock     & Stone        & Stone block & Polished block & Engraved block \\
+	Wood     & \Gls{Timber} & Lumber      & Boards         & Painted Boards \\
 \end{longtable}
 
 \section{Armory}\label{ch:Goods:Armory}
@@ -153,15 +153,15 @@ within this table.
 
 \begin{longtable}{cccc}
 	\toprule
-	Material & Armor-Tier & Shield-Tier & Melee-Tier \\
+	Material   & Armor-Tier & Shield-Tier & Melee-Tier \\
 	\midrule
-	Leather  & 1          & 0           & None       \\
-	Wood     & None       & 1           & 0          \\
-	Copper   & 2          & 2           & 2          \\
-	Iron     & 3          & 3           & 3          \\
-	Steel    & 4          & 4           & 4          \\
+	Leather    & 1          & 0           & None       \\
+	Wood       & None       & 1           & 0          \\
+	Copper     & 2          & 2           & 2          \\
+	Iron       & 3          & 3           & 3          \\
+	Steel      & 4          & 4           & 4          \\
 	% Extension space for more metals
-	Moonsilver  & 7          & 6           & 6          \\ \bottomrule
+	Moonsilver & 7          & 6           & 6          \\ \bottomrule
 \end{longtable}
 
 \subsection{Weapons}\label{ch:Goods:Armory:Weapons}
