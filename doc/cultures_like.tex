@@ -34,7 +34,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage[toc]{glossaries}
+\usepackage[toc, section=section]{glossaries}
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
@@ -85,11 +85,7 @@
 	},
 }
 
-\input{tribes_glo.tex}
-\input{goods_glo.tex}
-\input{biomes_glo.tex}
-
-\makeglossaries{}
+\input{glossaries/include_glossaries.tex}
 
 \begin{document}
 
@@ -129,8 +125,6 @@
 % 
 % Food production also ties into this as the retinues hunger makes a settlement necessary and the available farmland limits the size of the final settlement.
 
-\printglossary[type=tribe]{}
-\printglossary[type=good]{}
-\printglossary[type=biome]{}
+\input{chapters/glossary.tex}
 \end{document}
 
