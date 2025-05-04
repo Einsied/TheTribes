@@ -26,6 +26,7 @@
 	description={can be collected from \hyperref[ch:Goods:Nature:Plants:Limited]{plants}}
 }
 
+% Building Materials
 \newglossaryentry{Timber}{
 	name=timber,
 	type=good,
@@ -37,13 +38,23 @@
 	name=meat,
 	type=good,
 	description={gained by slaugthering \hyperref[ch:World:Inhabitants:Animals]{wild animals} and
-			\hyperref[ch:World:Inhabitants:Livestock]{livestock}}
+			\hyperref[ch:World:Inhabitants:Livestock]{livestock} it can directly be consumed as \gls{Food}}
 }
 
 \newglossaryentry{Fish}{
 	name=fish,
 	type=good,
-	description={fished from the \gls{Sea} the \hyperref[ch:Goods:Nature:Sea]{fish} can be directly consumed}
+	description={fished from the \gls{Sea} the \hyperref[ch:Goods:Nature:Sea]{fish} can be directly consumed as \gls{Food}}
+}
+
+% Abstract terms, like weapon, armor or tool
+\newglossaryentry{Food}{
+	name=food,
+	type=good,
+	description={anything the members of the \hyperref[ch:Tribes]{tribes} can consume for sustenance.
+			\hyperref[ch:Goods:Food]{Food}-goods have different quality and nutritional values.
+			Since a lot of ingredients are edible they are also
+			\hyperref[ch:Goods:Food]{food}-goods}
 }
 
 \newglossaryentry{Weapon}{
