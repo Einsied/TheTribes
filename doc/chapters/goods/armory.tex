@@ -2,77 +2,138 @@
 
 As the inhabitants of this world are rather war-like, the various implements of
 conflict are listed here. In general the quality of the devices depends on the
-materials used for them. For a better overview the materials can be found
-within this table.
+materials used to produce them. For a better overview the materials and
+expected quality are listed in a table.
 
-\begin{longtable}{llll}
+\begin{longtable}{lllll}
 	\toprule
-	Material   & Armor-Tier & Shield-Tier & Melee-Tier \\
+	Material   & \Gls{BodyArmor} & \Gls{Helmet} & \Gls{Shield} & \Gls{Weapon} \\
 	\midrule
-	Leather    & 1          & 0           & None       \\
-	Wood       & None       & 1           & 0          \\
-	Copper     & 2          & 2           & 2          \\
-	Iron       & 3          & 3           & 3          \\
-	Steel      & 4          & 4           & 4          \\ % Place for further expansion of metals
-	Moonsilver & 7          & 6           & 6          \\
+	Leather    & Lowest          & Lowest       & Lowest       & Lowest       \\
+	Rock       & None            & None         & None         & Lower        \\
+	Wood       & None            & None         & Lower        & Lower        \\
+	Obsidian   & None            & None         & None         & Low          \\
+	Copper     & Low             & Low          & Low          & Low          \\
+	Iron       & Medium          & Medium       & Medium       & Medium       \\
+	Steel      & High            & High         & High         & High         \\ % Place for further expansion of metals
+	Moonsilver & Highest         & Highest      & Highest      & Highest      \\
 	\bottomrule
 \end{longtable}
+
+Implements of war are also often decorated to strengthen the morale of the user
+or strike fear into their opponents if they are \glspl{Weapon}. The amount of
+decoration is usually categorized as \emph{plain}, \emph{simple} or
+\emph{elegant}.
+
+Using the kind of implement the material and the decoration permits a rough
+categorization and first impression, that can later be refined by a look at the
+details.
 
 \subsection{\Glsfmttext{Weapon}s}\label{ch:Goods:Armory:Weapons}
 
-This section lists the various weapons and their qualities. They are
-categorized according to the \emph{damage} they do to opponents without armor,
-the ease with which they \emph{penetrate} armor, the \emph{speed} they permit
-their users attacks, the \emph{training} necessary to employ them efficiently
-and their \emph{range}.
+Various weapons are employed by the
+\hyperref[ch:World:Inhabitants:Sapients]{sapient inhabitants} of this world,
+most of them manufactured and used by the \hyperref[ch:Tribes]{tribes} in
+\hyperref[chch:Conflict:Combat]{combat}. Since there is a great number of
+different weapons they are categorized in more abstract terms.
 
-\begin{longtable}{lllllr}
+For a first overview we compare how much \hyperref[ch:Conflict:Combat]{harm}
+the \glspl{Weapon} do, how well they penetrate \gls{Armor} and how far they
+reach\footnote{ Range is different for different weapon types. So a melee
+	weapon with \emph{lowest} range might reach 1 meter, but a ranged weapon with
+	\emph{lowest} range might reach 10 meter. }.
+
+\begin{longtable}{lllllll}
 	\toprule
 	Weapon
-	 & Damage  & Penetration
-	 & Speed   & Training    & Range \\
+	 & Physical & Penetration
+	 & Stun     & Morale
+	 & Range    & Ranged      \\
 	\midrule
-	Spear
-	 & Low     & Medium
-	 & Medium  & Low         & 2 m   \\
-	Short Sword
-	 & Medium  & Medium
-	 & Higher  & High        & 1 m   \\
 	Battle Axe
-	 & Highest & Lower
-	 & Medium  & Lower       & 1 m   \\
+	 & Highest  & Lower
+	 & Lower    & Medium
+	 & Lowest   & No          \\
+	Short sword
+	 & Medium   & Medium
+	 & Lower    & Lower
+	 & Lowest   & No          \\
+	Spear
+	 & Low      & Medium
+	 & Lowest   & Lower
+	 & Lower    & No          \\
 	Short bow
-	 & Medium  & Lower
-	 & Medium  & High        & 30 m  \\
+	 & Medium   & Lower
+	 & Lower    & Lower
+	 & Medium   & Yes         \\
 	\bottomrule
 \end{longtable}
 
-Weapons do not only influence the physical battle but also the mental fortitude
-of the enemy. To strike \emph{fear} into their enemies and improve their own
-\emph{morale} some tribes decorate their weapons- The following list summarizes
-the effect of the decorations.
+Next we consider how the do \hyperref[ch:Conflict:Combat]{harm} on the
+battlefield. First we took a look at the direct physical results of the
+\glspl{Weapon}.
 
-\begin{longtable}{l ll ll ll}
+\begin{longtable}{llll}
 	\toprule
 	Weapon
-	 & \multicolumn{3}{c}{Morale}
-	 & \multicolumn{3}{c}{Fear}
-	\\
-	 & Plain                      & Simple & Elegant
-	 & Plain                      & Simple & Elegant \\
+	 & \multicolumn{3}{c}{Physical and Stun}                              \\
+	 & Distribution                          & Delivery   & Avoids allies \\
 	\midrule
-	Spear
-	 & Lowest                     & Lower  & Low
-	 & Lowest                     & Lower  & Low     \\
-	Short Sword
-	 & Lower                      & Medium & High
-	 & Lowest                     & Lower  & Low     \\
 	Battle Axe
-	 & Medium                     & High   & Higher
-	 & Lower                      & Medium & High    \\
+	 & Single                                & Direct     & Yes           \\
+	Short sword
+	 & Single                                & Direct     & Yes           \\
+	Spear
+	 & Single                                & Direct     & Yes           \\
 	Short bow
-	 & Lower                      & Low    & Medium
-	 & Lowest                     & Lowest & Lowest  \\
+	 & Single                                & Projectile & No            \\
+	\bottomrule
+\end{longtable}
+
+The next table summarizes how \hyperref[ch:Conflict:Combat]{harm} is done to
+the spirit or morale of the opponent.
+
+\begin{longtable}{llll}
+	\toprule
+	Weapon
+	 & \multicolumn{3}{c}{Morale}                               \\
+	 & Distribution               & Delivery   & Discrimination \\
+	\midrule
+	Battle Axe
+	 & Area                       & Direct     & Yes            \\
+	Short sword
+	 & Area                       & Direct     & Yes            \\
+	Spear
+	 & Area                       & Direct     & Yes            \\
+	Short bow
+	 & Area                       & Projectile & No             \\
+	\bottomrule
+\end{longtable}
+
+Lastly we have to think about how the \glspl{Weapon} affect their users. This
+include the \emph{speed} at which it can be used, the \emph{training} required
+to use it, the \emph{morale} boost the user experiences and lastly the
+\emph{weight} on the user. \emph{Weight} is more relevant for armor an limits
+the users speed overall.
+
+\begin{longtable}{lllll}
+	\toprule
+	Weapon
+	 & Speed  & Training
+	 & Morale & Weight   \\
+	\midrule
+	Battle Axe
+	 & Medium & Low
+	 & Medium & High     \\
+	Short sword
+	 & Higher & High
+	 & Medium & Lower    \\
+	Spear
+	 & Medium & Low
+	 & Lower  & Low      \\
+	Short bow
+	 & Medium & High
+	 & Low    & Lower    \\
 	\bottomrule
 \end{longtable}
 
@@ -102,52 +163,62 @@ enemies and have an acceptable range.
 \subsection{\Glsfmttext{Armor}}\label{ch:Goods:Armory:Armor}
 
 To protect them selves against their opponents the tribes fabricate different
-forms of \gls{Armor} and defenses. Those are listed here and categorized
-according to the protection they offer against \emph{close ranged} weapons,
-like spears and swords, the protection they offer against \emph{projectile}
-weapons like bows. In addition the \emph{weight} inhibiting the wearers
-movement and the effect on the wearers \emph{morale} are listed.
+forms of \gls*{Armor} and defenses. Those can be categorized according to the
+protection they offer against melee/\hyperref[ch:Conflict]{\emph{direct}} or
+\hyperref[ch:Conflict]{\emph{projectile}} \glspl{Weapon}, the \emph{weight}
+inhibiting the wearers movement and the effect on the wearers \emph{morale}.
 
-\begin{longtable}{lllll}
+\begin{longtable}{llllll}
 	\toprule
-	Equipment
-	 & Close range & Projectile & Weight  & Morale  \\
+	\Gls*{Armor}
+	 & Close range & Stun   & Projectile & Weight & Morale \\
 	\midrule
-	Light \gls{BodyArmor}
-	 & Medium      & Low        & Low     & Low     \\
-	Medium \gls{BodyArmor}
-	 & Higher      & Medium     & High    & Medium  \\
-	Heavy \gls{BodyArmor}
-	 & Highest     & High       & Highest & High    \\
-	\midrule
-	Light \gls{Shield}
-	 & Lowest      & Low        & Lowest  & Lowest  \\
-	Medium \gls{Shield}
-	 & Lower       & High       & Lower   & Lower   \\
-	Heavy \gls{Shield}
-	 & Medium      & Highest    & Low     & Low     \\
-	\midrule
-	Light \gls{Helmet}
-	 & Lowest      & Lowest     & Lowest  & High    \\
-	Medium \gls{Helmet}
-	 & Lower       & Lowest     & Lower   & Higher  \\
-	Heavy \gls{Helmet}
-	 & Low         & Lowest     & Low     & Highest \\
+	\Gls{BodyArmor}
+	 & Higher      & Medium & Medium     & High   & Medium \\
+	\Gls{Shield}
+	 & Lower       & Lower  & High       & Lower  & Lower  \\
+	\Gls{Helmet}
+	 & Lower       & Medium & Lowest     & Lower  & Higher \\
 	\bottomrule
 \end{longtable}
 
-Decorations that are added by some tribes to the pieces of armor have different
-effects on the morale of the wearer. No equipment will lower the morale of the
-wearer but the influence of the different values of elaboration are listed
-here.
+In contrast to \glspl{Weapon} \gls*{Armor} is not sub-categorized into types
+but into weight classes. So every item of armor is classed as \emph{light},
+\emph{medium} and \emph{heavy} in addition to the three decoration categories,
+so we may encounter a \textquote{Heavy elegant \gls{Helmet}} on the
+battlefield, which should have highest values among most \glspl{Helmet}.
 
-\begin{longtable}{llll}
+The level of decoration and weight influences the values for the pieces of
+\gls{Armor} with different strengths. So a \emph{heavy} \gls{BodyArmor} is
+heavier than a \emph{medium} one relative to a \emph{heavy} and \emph{medium}
+\gls{Helmet}. So the influence ot the weight is tracked here:
+
+\begin{longtable}{llllll}
 	\toprule
-	Category        & Plain  & Simple & Elegant \\
+	\Gls*{Armor}
+	 & Close range & Stun   & Projectile & Weight & Morale \\
 	\midrule
-	\Gls{BodyArmor} & Lower  & Low    & Medium  \\
-	\Gls{Shield}    & Lowest & Lower  & Low     \\
-	\Gls{Helmet}    & Lower  & High   & Highest \\
+	\Gls{BodyArmor}
+	 & Medium      & Low    & Medium     & Higher & Low    \\
+	\Gls{Shield}
+	 & Lower       & Lower  & High       & Lower  & Lower  \\
+	\Gls{Helmet}
+	 & Lowest      & Medium & Lowest     & Lowest & Low    \\
+	\bottomrule
+\end{longtable}
+
+Decorations that are added by some \hyperref[ch:Tribes]{tribes} to the pieces
+of \gls*{Armor} have different effects on the morale of the wearer. No piece of
+\gls*{Armor} will lower the morale of the wearer but the influence differs
+significantly.
+
+\begin{longtable}{ll}
+	\toprule
+	\Gls*{Armor}    & Decoration-Impact \\
+	\midrule
+	\Gls{BodyArmor} & Low               \\
+	\Gls{Shield}    & Low               \\
+	\Gls{Helmet}    & High              \\
 	\bottomrule
 \end{longtable}
 
