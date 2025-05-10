@@ -1,5 +1,52 @@
 \newglossary*{good}{Goods}
 
+% Abstract terms, like weapon, armor or tool
+\newglossaryentry{Food}{
+	name=food,
+	type=good,
+	description={anything the members of the \hyperref[ch:Tribes]{tribes} can consume for sustenance.
+			\hyperref[ch:Goods:Food]{Food}-goods have different quality and nutritional values.
+			Since a lot of ingredients are edible they are also
+			\hyperref[ch:Goods:Food]{food}-goods}
+}
+
+\newglossaryentry{Merchandise}{
+	name=merchandise,
+	type=good,
+	description={anything the members of the \hyperref[ch:Tribes]{tribes} consume for joy.
+			\hyperref[ch:Goods:Merchandise]{Merchandise} usually comes with a quality level and durability}
+}
+
+\newglossaryentry{Equipment}{
+	name=equipment,
+	type=good,
+	description={anything the members of the \hyperref[ch:Tribes]{tribes} use to enhance their themselves
+			\Glspl{Shoe} are a great example for \hyperref[ch:Goods:Equipment]{equipment} permitting faster walking}
+}
+
+\newglossaryentry{Tool}{
+	name=tool,
+	type=good,
+	description={anything the members of the \hyperref[ch:Tribes]{tribes} use to do their work except for \glspl{Weapon}.
+			\Glspl{Pick} are a great example for \hyperref[ch:Goods:Tools]{tools} often used in mining}
+}
+
+\newglossaryentry{Weapon}{
+	name=weapon,
+	type=good,
+	description={is an implements of war.
+			\hyperref[ch:Goods:Armory:Weapons]{Weapons} are wielded by the members of the \hyperref[ch:Tribes]{tribes} against each other
+			and the different \hyperref[ch:World:Inhabitants]{animals}}
+}
+
+\newglossaryentry{Armor}{
+	name=armor,
+	type=good,
+	description={is an implements of war.
+			\hyperref[ch:Goods:Armory:Weapons]{Armor} is used by the members of the \hyperref[ch:Tribes]{tribes} to protect themselves
+			form each other and \hyperref[ch:World:Inhabitants:Animals]{wild animals}}
+}
+
 % Raw inputs
 \newglossaryentry{Game}{
 	name=game,
@@ -78,51 +125,4 @@
 	name=pick,
 	type=good,
 	description={a \gls{Tool} often used for mining}
-}
-
-% Abstract terms, like weapon, armor or tool
-\newglossaryentry{Food}{
-	name=food,
-	type=good,
-	description={anything the members of the \hyperref[ch:Tribes]{tribes} can consume for sustenance.
-			\hyperref[ch:Goods:Food]{Food}-goods have different quality and nutritional values.
-			Since a lot of ingredients are edible they are also
-			\hyperref[ch:Goods:Food]{food}-goods}
-}
-
-\newglossaryentry{Merchandise}{
-	name=merchandise,
-	type=good,
-	description={anything the members of the \hyperref[ch:Tribes]{tribes} consume for joy.
-			\hyperref[ch:Goods:Merchandise]{Merchandise} usually comes with a quality level and durability}
-}
-
-\newglossaryentry{Equipment}{
-	name=equipment,
-	type=good,
-	description={anything the members of the \hyperref[ch:Tribes]{tribes} use to enhance their themselves
-			\Glspl{Shoe} are a great example for \hyperref[ch:Goods:Equipment]{equipment} permitting faster walking}
-}
-
-\newglossaryentry{Tool}{
-	name=tool,
-	type=good,
-	description={anything the members of the \hyperref[ch:Tribes]{tribes} use to do their work except for \glspl{Weapon}.
-			\Glspl{Pick} are a great example for \hyperref[ch:Goods:Tools]{tools} often used in mining}
-}
-
-\newglossaryentry{Weapon}{
-	name=weapon,
-	type=good,
-	description={is an implements of war.
-			\hyperref[ch:Goods:Armory:Weapons]{Weapons} are wielded by the members of the \hyperref[ch:Tribes]{tribes} against each other
-			and the different \hyperref[ch:World:Inhabitants]{animals}}
-}
-
-\newglossaryentry{Armor}{
-	name=armor,
-	type=good,
-	description={is an implements of war.
-			\hyperref[ch:Goods:Armory:Weapons]{Armor} is used by the members of the \hyperref[ch:Tribes]{tribes} to protect themselves
-			form each other and \hyperref[ch:World:Inhabitants:Animals]{wild animals}}
 }
