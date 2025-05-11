@@ -77,8 +77,23 @@ bounty they can use.
 The world is inhabited by sapient creatures mostly organized into the various
 \hyperref[ch:Tribes]{tribes} and animals. The animals fall into two general
 categories \hyperref[ch:World:Inhabitants:Animals]{wild animals} and
-\hyperref[ch:World:Inhbitants:Livestock]{livestock}. These will be described in
-this section.
+\hyperref[ch:World:Inhbitants:Livestock]{livestock}.
+
+All of them share a few general characteristics, like the \emph{speed} they
+move or the \hyperref[ch:Conflict:Combat]{harm} they can absorb before
+suffering severe consequences. These vary from species to species. Please note
+that \hyperref[ch:World:Inhabitants:Sapients]{sapients}
+
+\begin{longtable}{l l lll lll}
+	\toprule
+	Species    & Speed  & \multicolumn{3}{c}{Resistance} & \multicolumn{3}{c}{Regeneration}                                        \\
+	           &        & Physical                       & Stun                             & Morale & Physical & Stun   & Morale  \\
+	\midrule
+	\Gls{Boar} & Medium & Low                            & Medium                           & Medium & High     & Higher & Highest \\
+	\Gls{Deer} & Higher & Lowest                         & Low                              & Lowest & High     & Higher & Hight   \\
+	Human      & Medium & Medium                         & Medium                           & Medium & Medium   & Medium & Medium  \\
+	\bottomrule
+\end{longtable}
 
 \subsection{Wild animals}\label{ch:World:Inhabitants:Animals}
 
@@ -89,22 +104,27 @@ resource. Only the \gls{Vikings} can use them for a sustainable economy,
 because their \hyperref[ch:Tribes:Vikings:Religion:Forest]{sanctuaries}
 replenish them.
 
-\begin{longtable}{llll}
+In addition to the general attributes of all inhabitants, they are also
+described by the \emph{Danger} they pose to other inhabitants, the
+\emph{aggression} they exhibit towards them. and their occurrence in different
+\hyperref[ch:World:Biomes]{biomes}.
+
+\begin{longtable}{llllllll}
 	\toprule
-	Animal     & Biome                         & Danger & Speed  \\
+	Animal     & Danger & Aggression & \Gls{Grassland} & \Gls{Forest} & \Gls{Jungle} & \Gls{Desert} & \Gls{Mountain} \\
 	\midrule
-	\Gls{Deer} & \Gls{Forest}                  & None   & Higher \\
-	\Gls{Boar} & \Gls{Grassland}, \Gls{Forest} & Low    & Medium \\
+	\Gls{Boar} & Low    & Low        & Lower           & Medium       & Lower        & None         & None           \\
+	\Gls{Deer} & Lowest & None       & Lowest          & High         & None         & None         & None           \\
 	\bottomrule
 \end{longtable}
-
-\paragraph{Deer}
-Deer are forest dwellers. They pose no danger to the tribes and flee, when
-spotted or attacked. They are hunted for \gls{Meat} and \glspl{Hide}.
 
 \paragraph{Boars}
 Boars dwell on the grassland and the forest. They are hunted for their
 \gls{Meat} and \glspl{Hide} and often fight back against the hunters.
+
+\paragraph{Deer}
+Deer are forest dwellers. They pose no danger to the tribes and flee, when
+spotted or attacked. They are hunted for \gls{Meat} and \glspl{Hide}.
 
 \subsection{Livestock}\label{ch:World:Inhabitants:Livestock}
 
