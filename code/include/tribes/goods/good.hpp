@@ -11,6 +11,9 @@
 
 #include "tribes/types.hpp"
 
+#include <memory>
+#include <expected>
+
 namespace tribes::good
 {
 	/**
@@ -21,21 +24,39 @@ namespace tribes::good
 	 */
 	class Good
 	{
+	public:
 		/**
 		 * @brief This is a global identifier for all goods
 		 */
 		using Identifier = uint64_fast;
 
 		/**
+		 * @brief Get a pointer to a good by its identifier
+		 * @details Goods are supposed to be static once instantiated,
+		 * so you are not permitted to change them.
+		 * @param identifier the identifier
+		 * @return A reference to the good associated with the identifier
+		 */
+		static std::expected<Good const &, bool> GetGood(Identifier identifier);
+
+		/**
 		 * @brief The default constructor
+		 * @note Deleted, because every good should have an unique identifier
 		 */
 		Good() = delete;
 
 		/**
+		 * @brief Construct a new good
+		 * @param identifier the unique identifier this good will use
+		 */
+		Good(Identifier const &identifier);
+
+		/**
 		 * @brief The copy constructor
 		 * @param to_copy the instance to copy
+		 * @note Considering the instances are supposed to exist only once we need no copy
 		 */
-		Good(Good const &to_copy);
+		Good(Good const &to_copy) = delete;
 
 		/**
 		 * @brief The move constructor
@@ -46,9 +67,10 @@ namespace tribes::good
 		/**
 		 * @brief The copy assignment operator
 		 * @param to_copy the instance to copy
+		 * @note Considering the instances are supposed to exist only once we need no copy
 		 * @return reference to the new copy
 		 */
-		Good &operator=(Good const &to_copy);
+		Good &operator=(Good const &to_copy) = delete;
 
 		/**
 		 * @brief The copy assignment operator
@@ -58,10 +80,26 @@ namespace tribes::good
 		Good &operator=(Good &&to_move);
 
 		/**
+		 * @brief The destructor
+		 */
+		~Good();
+
+		/**
 		 * @brief Get the I
 		 * @return the identifier belonging to this good
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		Identifier GetIdentifier() const;
+
+	private:
+		/**
+		 * @brief The forward declaration for pointer-to-implementation
+		 */
+		class Implementation;
+
+		/**
+		 * @brief The pointer to the implementation to hide the details
+		 */
+		std::unique_ptr<Implementation> implementation_ { std::make_unique<Implementation>() }
 	};
 };
