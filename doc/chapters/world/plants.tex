@@ -1,70 +1,89 @@
 \section{Plants}\label{ch:World:Plants}
 
-% Todo rewrite this whole section
+The world is home to a wide variety of different plants. Some of these are
+abundant, covering the soil in the different \hyperref[ch:World:Biomes]{biomes}
+like \gls{Grass} in the \gls{Grassland}. Others are more rare like
+\glspl{AppleTree} or \glspl{Mushroom}. These section deals with all of them.
 
-The world is home to a wide variety of plants. Plants can be categorized into
-plants of special interesting like trees or herbs and abundant plants. Abundant
-usually cover large areas and are to abundant to track. \emph{Grass} is a good
-example. In the following list all special plants will be listed with the
-\emph{fruit} they create continuously and the resources they can be
-\emph{harvested} for.
+\subsection{Abundant plants}\label{ch:World:Plants:Abundant}
+
+Abundant plants grow so fast and plentiful that they are not tracked
+individually, instead the surface layer on most
+\hyperref[ch:World:Biomes]{biomes} is covered in them. So we list them
+according to the \hyperref[ch:World:Biomes]{biomes} they appear in.
 
 \begin{longtable}{llllll}
 	\toprule
-	Plant         & Fruit    & Harvest        & Biome             & Growth & Abundance \\
+	Plant       & \multicolumn{5}{c}{\hyperref[ch:World:Biomes]{Biome} occurrence}                                                               \\
+	            & \Gls{Grassland}                                                  & \Gls{Forest} & \Gls{Jungle} & \Gls{Desert} & \Gls{Mountain} \\
 	\midrule
-	Herb          & None     & \Gls{Herb}     & Forest            & High   & Low       \\
-	Mushroom      & None     & \Gls{Mushroom} & Forest            & Medium & Low       \\
-	Fir           & None     & \Gls{Timber}   & Forest            & Low    & High      \\
-	Oak           & None     & \Gls{Timber}   & Forest, Grassland & Lowest & Lower     \\
-	Apple-tree    & Apple    & \Gls{Timber}   & Forest, Grassland & Lower  & Lower     \\
-	Chestnut-tree & Chestnut & \Gls{Timber}   & Forest, Grassland & Lower  & Lower     \\
+	\Gls{Grass} & Highest                                                          & Medium       & None         & None         & Lower          \\
+	\Gls{Moss}  & Lowest                                                           & Higher       & Lower        & None         & Medium         \\
 	\bottomrule
 \end{longtable}
 
-\subsection{What grows in abundance}\label{ch:Goods:Nature:Plants:Abundant}
+\subsubsection{\Glsfmttext{Grass}}
 
-Abundant plants usually cover the entire ground of a Biome, therefore they are
-not tracked separately.
+\Gls*{Grass} covers the ground within the \gls{Forest} and the \gls{Grassland}.
+Some \hyperref[ch:World:Inhabitants:Livestock]{livestock}.
+needs to graze to live. This can only happen on soil covered with \gls{Grass} or similar abundant plants.
 
-\paragraph{Grass}
+\subsubsection{\Glsfmttext{Moss}}
 
-Grass covers the ground within the forests and the grasslands. Some livestock
-needs to graze to live. This can only happen on grassland. The grass grows fast
-enough so it is not affected by the grazing.
+\Gls*{Moss} is a abundant plant that can be consumed by some \hyperref[ch:World:Inhabitants:Livestock]{livestock}.
+\Gls*{Moss} covers the ground within the \gls{Forest} and can be used to graze some \hyperref[ch:World:Inhabitants:Livestock]{livestock}.
 
-\subsection{What grows and is searched}\label{ch:Goods:Nature:Plants:Limited}
+\subsection{Rare Plants}\label{ch:World:Plants:Rare}
 
-Most plants are limited in their occurrence. So while they regrows their total
-number within an area is limited. The easiest way to understand the concept are
-trees. A grove consists of a few trees, once they are felled they are gone.
-Mushrooms, herbs and other plants follow a similar principle.
+Most plants may be plentiful, but they are not abundant, so in contrast to the
+\hyperref[ch:World:Plants:Abundant]{abundant plants} they are called rare
+plants. They grow slower than \hyperref[ch:World:Plants:Abundant]{abundant
+	plants}, making it necessary to describe their \emph{growth} separately. They
+also produce a variety of \hyperref[ch:Goods:Nature:Plants]{goods} utilized in
+the economies of the \hyperref[ch:Tribes]{tribes}.
 
-\paragraph{Herbs}
+\begin{longtable}{lllllll}
+	\toprule
+	Plant                & Growth & \multicolumn{5}{c}{\hyperref[ch:World:Biomes]{Biome} occurrence}                                                               \\
+	                     &        & \Gls{Grassland}                                                  & \Gls{Forest} & \Gls{Jungle} & \Gls{Desert} & \Gls{Mountain} \\
+	\midrule
+	\Gls{Plant:Herb}     & High   & Lower                                                            & Low          & Low          & None         & Lowest         \\
+	\Gls{Plant:Mushroom} & Medium & Lowest                                                           & Low          & Low          & None         & Lowest         \\
+	\Gls{Fir}            & Low    & None                                                             & High         & None         & None         & Low            \\
+	\Gls{Oak}            & Lowest & Lower                                                            & Low          & None         & None         & Lowest         \\
+	\Gls{AppleTree}      & Lower  & Lower                                                            & Low          & Low          & None         & None           \\
+	\Gls{ChestnutTree}   & Lower  & Lower                                                            & Low          & None         & None         & None           \\
+	\bottomrule
+\end{longtable}
 
-Within the forest medicinal herbs grow. These are can also be used as a food
-additives.
+\subsubsection{\Glsfmttext{Plant:Herb}}
 
-\paragraph{Mushromm}
+Within the forest medicinal \glspl*{Plant:Herb} grow. They are
+\glslink{Herb}{harvested} and often used to prepare \gls{Food}, \gls{Medicine}
+or \gls{Drink}.
 
-Mushrooms grow within the forest and can be used for medical purposes or as
-food.
+\subsubsection{\Glsfmttext{Plant:Mushroom}}
 
-\paragraph{Fir}
+\Glspl*{Plant:Mushroom} grow mostly within the \gls{Forest} and the \gls{Jungle}.
+They are \glslink{Mushroom}{collected} and used
+to prepare \gls{Food}, \gls{Medicine} or \gls{Drink}.
 
-The fir grows within the forest and can be felled for timber.
+\subsubsection{\Glsfmttext{Fir}}
 
-\paragraph{Oak}
+\Glspl*{Fir} grow within the \gls{Forest} and can be felled for \gls{Timber}.
 
-Oak trees dot the forest and grassland and can be felled for timber.
+\subsubsection{\Glsfmttext{Oak}}
 
-\paragraph{Apple-tree}
+\Glspl*{Oak} dot the \gls{Forest} and \gls{Grassland} and can be felled for \gls{Timber}.
 
-Within the grassland and the forest the fruit of apple trees appear, unless
-they are cut down for timber.
+\subsubsection{\Glsfmttext{AppleTree}}
 
-\paragraph{Chestnut-tree}
+Within the \gls{Grassland} and the \gls{Forest} the \glslink{Apple} {fruit} of
+apple trees can be collected, unless they are cut down for \gls{Timber}.
 
-The Chestnuts grow in the grassland and the forest and are often consumed by
-wild animals, but some of the tribe appreciate them too, others just see
-valuable building material in them.
+\subsubsection{\Glsfmttext{ChestnutTree}}
+
+The \Glsfmttext{ChestnutTree} grows in the \gls{Grassland} and the \gls{Forest}
+and their \glslink{Chestnut}{nuts} can be consumed by
+\hyperref[ch:World:Inhabitants]{creatures} creatures passing by or cut down for
+\gls{Timber}.
