@@ -13,6 +13,7 @@
 
 #include <memory>
 #include <expected>
+#include <cstdint>
 
 namespace tribes::good
 {
@@ -28,16 +29,18 @@ namespace tribes::good
 		/**
 		 * @brief This is a global identifier for all goods
 		 */
-		using Identifier = uint64_fast;
+		using Identifier = uint_fast64_t;
 
 		/**
 		 * @brief Get a pointer to a good by its identifier
 		 * @details Goods are supposed to be static once instantiated,
 		 * so you are not permitted to change them.
+		 * @note The pointer is an observer and the observed object should exist during the entire runtime
+		 * 	so ownership managemanent is not necessary
 		 * @param identifier the identifier
-		 * @return A reference to the good associated with the identifier, true if the good could be found
+		 * @return A pointer to the good associated with the identifier, true if the good could be found
 		 */
-		static std::expected<Good const &, bool> GetGood(Identifier identifier);
+		static std::expected<Good const *, bool> GetGood(Identifier identifier);
 
 		/**
 		 * @brief The default constructor
@@ -100,6 +103,6 @@ namespace tribes::good
 		/**
 		 * @brief The pointer to the implementation to hide the details
 		 */
-		std::unique_ptr<Implementation> implementation_ { std::make_unique<Implementation>() }
+		std::unique_ptr<Implementation> implementation_{std::make_unique<Implementation>()};
 	};
 };
