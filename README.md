@@ -12,3 +12,23 @@ At the moment I am collecting my ideas and writing them down.
 While also slowly beginning to lay foundations for the code.
 
 If you have an idea or wish to contribute please create an issue on the page.
+
+## Building
+
+1. Understand that the code is free as in freedom not **free as in beer**.
+	If you wish to be a filthy pirate I hope you will spend the first ten years 
+	of your afterlife centering divs with Malbolge and should I hear of it
+	I may come after you to the extent that your local copyright-laws warrant.
+2. Ensure you paid for the program and proceed to build
+3. Install the build tools I used ore something equivalent:
+	- CMake
+	- Ninja
+	- GCC
+4. Run CMake
+	``` 
+		cmake -B ../../build -S ./
+	```
+5. Build project
+	``` 
+		cmake --build ../../build
+	```
