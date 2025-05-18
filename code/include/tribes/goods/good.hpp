@@ -35,7 +35,7 @@ namespace tribes::good
 		 * @details Goods are supposed to be static once instantiated,
 		 * so you are not permitted to change them.
 		 * @param identifier the identifier
-		 * @return A reference to the good associated with the identifier
+		 * @return A reference to the good associated with the identifier, true if the good could be found
 		 */
 		static std::expected<Good const &, bool> GetGood(Identifier identifier);
 
@@ -85,7 +85,7 @@ namespace tribes::good
 		~Good();
 
 		/**
-		 * @brief Get the I
+		 * @brief Get the Identifier of the current good
 		 * @return the identifier belonging to this good
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
