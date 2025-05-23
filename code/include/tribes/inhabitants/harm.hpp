@@ -58,6 +58,8 @@ namespace tribes::inhabitant
 		 * @param base_recovery_speed is the basic recovery speed for this harm
 		 * 	it can later be modified and just gives a general direction.
 		 * 	Since its meaning is not clear hear it does not have a units.
+		 * @todo the identifier should be given created by a static registry.
+		 * 	This means the constructor should be private and we should use a factory method
 		 */
 		Harm(Identifier const &identifier, float base_recovery_speed);
 

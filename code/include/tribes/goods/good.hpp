@@ -51,6 +51,8 @@ namespace tribes::good
 		/**
 		 * @brief Construct a new good
 		 * @param identifier the unique identifier this good will use
+		 * @todo the identifier should be given created by a static registry.
+		 * 	This means the constructor should be private and we should use a factory method
 		 */
 		Good(Identifier const &identifier);
 
