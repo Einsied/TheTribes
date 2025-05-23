@@ -47,5 +47,4 @@ namespace tribes::good
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
-
 };
