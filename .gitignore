@@ -2,3 +2,4 @@
 cultures_like.*
 !cultures_like.tex
 build*
+.vscode

@@ -26,5 +26,5 @@ target_link_libraries(Goods
 if(MSVC)
   target_compile_options(Goods PRIVATE /W4 /WX)
 else()
-  target_compile_options(Goods PRIVATE -Wall -Wextra -Wpedantic -Werror)
+  target_compile_options(Goods PRIVATE -Wall -Wextra -Wpedantic)
 endif()

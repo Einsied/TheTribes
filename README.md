@@ -27,7 +27,7 @@ If you have an idea or wish to contribute please create an issue on the page.
 4. Open terminal in the main folder
 5. Run CMake
 	``` 
-		cmake -B ./build -S ./code/
+		cmake -B ./build -S ./code/src
 	```
 6. Build project
 	``` 
