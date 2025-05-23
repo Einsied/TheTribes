@@ -23,14 +23,16 @@ project(Tribes
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(include "../include")
-set(source "./")
+set(include "${CMAKE_CURRENT_SOURCE_DIR}/../include")
+set(include_namespaced "${include}/tribes")
+set(source "${CMAKE_CURRENT_SOURCE_DIR}")
+
+add_subdirectory(goods)
 
 add_executable(Game)
 target_sources(Game
 	PRIVATE
-		"${include}/tribes/goods/good.hpp"
-		"${source}/goods/good.cpp"
+		"main.cpp"
 )
 target_include_directories(Game
 	PRIVATE
@@ -38,4 +40,5 @@ target_include_directories(Game
 )
 target_link_libraries(Game
 	PRIVATE
+	Goods
 )
