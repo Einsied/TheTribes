@@ -23,7 +23,7 @@ namespace tribes
 		class Stack;
 		class Food;
 		class Merchandise;
-		class Drink;
+		class Beverage;
 		class Medicine;
 		class Equipment;
 		class Tool;
