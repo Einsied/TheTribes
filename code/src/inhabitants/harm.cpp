@@ -47,4 +47,9 @@ namespace tribes::inhabitant
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
+
+	float Harm::GetBaseRecoverySpeed() const
+	{
+		throw std::runtime_error("Not implemented yet");
+	};
 };
