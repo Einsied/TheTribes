@@ -94,7 +94,10 @@ namespace tribes::good
 		 * @return the identifier belonging to this good
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		Identifier GetIdentifier() const;
+		virtual Identifier GetIdentifier() const;
+
+		// TODO use std:optional to gain possible properties of weapons, beverages, food etc.
+		// The idea is to return std::nullopt if the good is not a weapon, beverage, food etc.
 
 	private:
 		/**

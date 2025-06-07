@@ -16,11 +16,14 @@ namespace tribes
 
 	/**
 	 * @brief The namespace for all goods and related classes
+	 * @details a fundamental challenge for the goods is multiple-use.
+	 * An axe could be a tool or a weapon. A mushroom tea a beverage or medicine.
+	 * With multiple inheritance this may introduces the diamond problem.
+	 * To avoid it all goods have to contain the necessary values as properties.
 	 */
 	namespace good
 	{
 		class Good;
-		class Stack;
 		class Food;
 		class Merchandise;
 		class Beverage;
@@ -29,6 +32,12 @@ namespace tribes
 		class Tool;
 		class Weapon;
 		class Armor;
+		/*
+		 * Goods are either carried, stored in buildings ore are on the map.
+		 * In the former cases the inventory management just references the above classes,
+		 * in the last case they exist as a stack, so this is the only "on-map"-representation of goods.
+		 */
+		class Stack;
 	};
 
 	/**
