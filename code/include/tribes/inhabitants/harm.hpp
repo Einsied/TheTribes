@@ -31,7 +31,7 @@ namespace tribes::inhabitant
 	{
 	public:
 		/**
-		 * @brief This is a global identifier for all goods
+		 * @brief This is a global identifier for all harm
 		 */
 		using Identifier = uint_fast64_t;
 
