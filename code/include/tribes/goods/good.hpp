@@ -43,17 +43,9 @@ namespace tribes::good
 
 		/**
 		 * @brief The default constructor
-		 * @note Deleted, because every good should have an unique identifier
+		 * @note The good will automatically obtain the next free identifier.
 		 */
-		Good() = delete;
-
-		/**
-		 * @brief Construct a new good
-		 * @param identifier the unique identifier this good will use
-		 * @todo the identifier should be given created by a static registry.
-		 * 	This means the constructor should be private and we should use a factory method
-		 */
-		Good(Identifier const &identifier);
+		Good();
 
 		/**
 		 * @brief The copy constructor
@@ -85,6 +77,7 @@ namespace tribes::good
 
 		/**
 		 * @brief The destructor
+		 * @note Since goods are pseudo-globals these function should never be explicitly called.
 		 */
 		~Good();
 

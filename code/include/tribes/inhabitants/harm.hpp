@@ -53,14 +53,12 @@ namespace tribes::inhabitant
 
 		/**
 		 * @brief Construct a new good
-		 * @param identifier the unique identifier this harm will use
 		 * @param base_recovery_speed is the basic recovery speed for this harm
 		 * 	it can later be modified and just gives a general direction.
 		 * 	Since its meaning is not clear hear it does not have a unit.
-		 * @todo the identifier should be given created by a static registry.
-		 * 	This means the constructor should be private and we should use a factory method
+		 * @note The good will automatically obtain the next free identifier.
 		 */
-		Harm(Identifier const &identifier, float base_recovery_speed);
+		Harm(float base_recovery_speed);
 
 		/**
 		 * @brief The copy constructor
@@ -92,6 +90,7 @@ namespace tribes::inhabitant
 
 		/**
 		 * @brief The destructor
+		 * @note Since harms are pseudo-globals these function should never be explicitly called.
 		 */
 		~Harm();
 

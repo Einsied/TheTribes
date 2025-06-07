@@ -36,8 +36,9 @@ namespace tribes::good
 
 	};
 
-	Good::Good(Identifier const &identifier)
+	Good::Good()
 	{
+		// Get identifier from from the global list
 		throw std::runtime_error("Not implemented yet");
 	};
 

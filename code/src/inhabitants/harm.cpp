@@ -12,6 +12,7 @@
 #include "tribes/inhabitants/harm.hpp"
 
 #include <exception>
+#include <vector>
 
 namespace tribes::inhabitant
 {
@@ -35,8 +36,9 @@ namespace tribes::inhabitant
 
 	};
 
-	Harm::Harm(Identifier const &identifier, float base_recovery_speed)
+	Harm::Harm(float base_recovery_speed)
 	{
+		// Get identifier from from the global list
 		throw std::runtime_error("Not implemented yet");
 	};
 
