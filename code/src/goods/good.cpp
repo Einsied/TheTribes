@@ -23,6 +23,7 @@ namespace tribes::good
 		 * The position within the vector is the identifier of the good.
 		 */
 		std::vector<Good> global_goods;
+		// TODO thread safety mutex
 	};
 
 	/**

@@ -23,6 +23,7 @@ namespace tribes::inhabitant
 		 * The position within the vector is the identifier of the harm.
 		 */
 		std::vector<Harm> global_harms;
+		// TODO thread safety mutex
 	};
 
 	/**
