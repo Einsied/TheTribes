@@ -38,6 +38,7 @@ namespace tribes::good
 		 * @param identifier the identifier
 		 * @return A pointer to the good associated with the identifier, true if the good could be found
 		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		static std::expected<Good *, bool> GetGood(Identifier identifier);
 
 		/**

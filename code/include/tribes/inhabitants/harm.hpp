@@ -42,6 +42,7 @@ namespace tribes::inhabitant
 		 * @param identifier the identifier
 		 * @return A pointer to the harm associated with the identifier, true if the harm could be found
 		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		static std::expected<Harm *, bool> GetHarm(Identifier identifier);
 
 		/**
