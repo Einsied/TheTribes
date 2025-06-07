@@ -15,6 +15,15 @@
 
 namespace tribes::inhabitant
 {
+	namespace
+	{
+		/**
+		 * @brief This variable stores all the harms in the game.
+		 * The position within the vector is the identifier of the harm.
+		 */
+		std::vector<Harm> global_harms;
+	};
+
 	/**
 	 * @brief This is the implementation of the class
 	 */

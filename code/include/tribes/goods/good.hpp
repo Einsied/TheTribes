@@ -29,7 +29,7 @@ namespace tribes::good
 		/**
 		 * @brief This is a global identifier for all goods
 		 */
-		using Identifier = uint_fast64_t;
+		using Identifier = size_t;
 
 		/**
 		 * @brief Get a pointer to a good by its identifier

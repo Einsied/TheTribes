@@ -12,9 +12,19 @@
 #include "tribes/goods/good.hpp"
 
 #include <exception>
+#include <vector>
 
 namespace tribes::good
 {
+	namespace
+	{
+		/**
+		 * @brief This variable stores all the goods in the game.
+		 * The position within the vector is the identifier of the good.
+		 */
+		std::vector<Good> global_goods;
+	};
+
 	/**
 	 * @brief This is the implementation of the class
 	 */

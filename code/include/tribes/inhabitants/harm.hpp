@@ -33,7 +33,7 @@ namespace tribes::inhabitant
 		/**
 		 * @brief This is a global identifier for all harm
 		 */
-		using Identifier = uint_fast64_t;
+		using Identifier = size_t;
 
 		/**
 		 * @brief Get a pointer to a kind of harm by its identifier
