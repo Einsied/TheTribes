@@ -22,7 +22,7 @@ namespace tribes::good
 	{
 	};
 
-	std::expected<Good const *, bool> Good::GetGood(Identifier identifier) {
+	std::expected<Good *, bool> Good::GetGood(Identifier identifier) {
 
 	};
 

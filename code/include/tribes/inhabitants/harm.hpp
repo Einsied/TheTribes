@@ -37,14 +37,12 @@ namespace tribes::inhabitant
 
 		/**
 		 * @brief Get a pointer to a kind of harm by its identifier
-		 * @details Harms are supposed to be static once instantiated,
-		 * so you are not permitted to change them.
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
 		 * 	so ownership managemanent is not necessary
 		 * @param identifier the identifier
 		 * @return A pointer to the harm associated with the identifier, true if the harm could be found
 		 */
-		static std::expected<Harm const *, bool> GetHarm(Identifier identifier);
+		static std::expected<Harm *, bool> GetHarm(Identifier identifier);
 
 		/**
 		 * @brief The default constructor

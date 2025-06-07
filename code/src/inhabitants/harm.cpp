@@ -22,7 +22,7 @@ namespace tribes::inhabitant
 	{
 	};
 
-	std::expected<Harm const *, bool> Harm::GetHarm(Identifier identifier) {
+	std::expected<Harm *, bool> Harm::GetHarm(Identifier identifier) {
 
 	};
 

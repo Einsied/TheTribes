@@ -33,14 +33,12 @@ namespace tribes::good
 
 		/**
 		 * @brief Get a pointer to a good by its identifier
-		 * @details Goods are supposed to be static once instantiated,
-		 * so you are not permitted to change them.
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
 		 * 	so ownership managemanent is not necessary
 		 * @param identifier the identifier
 		 * @return A pointer to the good associated with the identifier, true if the good could be found
 		 */
-		static std::expected<Good const *, bool> GetGood(Identifier identifier);
+		static std::expected<Good *, bool> GetGood(Identifier identifier);
 
 		/**
 		 * @brief The default constructor
