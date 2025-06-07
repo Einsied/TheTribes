@@ -44,7 +44,7 @@ namespace tribes::inhabitant
 		 * @param identifier the identifier
 		 * @return A pointer to the harm associated with the identifier, true if the harm could be found
 		 */
-		static std::expected<Good const *, bool> GetHarm(Identifier identifier);
+		static std::expected<Harm const *, bool> GetHarm(Identifier identifier);
 
 		/**
 		 * @brief The default constructor
@@ -74,7 +74,7 @@ namespace tribes::inhabitant
 		 * @brief The move constructor
 		 * @param to_move the instance to move
 		 */
-		Harm(Good const &&to_move);
+		Harm(Harm const &&to_move);
 
 		/**
 		 * @brief The copy assignment operator
@@ -89,7 +89,7 @@ namespace tribes::inhabitant
 		 * @param to_move the instance to move
 		 * @return reference to the new object
 		 */
-		Good &operator=(Harm &&to_move);
+		Harm &operator=(Harm &&to_move);
 
 		/**
 		 * @brief The destructor
