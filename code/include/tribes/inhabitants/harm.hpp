@@ -36,6 +36,11 @@ namespace tribes::inhabitant
 		using Identifier = size_t;
 
 		/**
+		 * @brief This type measures the recovery speed for all harms
+		 */
+		using RecoverySpeed = float;
+
+		/**
 		 * @brief Get a pointer to a kind of harm by its identifier
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
 		 * 	so ownership managemanent is not necessary
@@ -58,7 +63,7 @@ namespace tribes::inhabitant
 		 * 	Since its meaning is not clear hear it does not have a unit.
 		 * @note The good will automatically obtain the next free identifier.
 		 */
-		Harm(float base_recovery_speed);
+		Harm(RecoverySpeed base_recovery_speed);
 
 		/**
 		 * @brief The copy constructor
@@ -108,7 +113,7 @@ namespace tribes::inhabitant
 		 * 	Since its meaning is not clear yet it does not have a unit.
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		float GetBaseRecoverySpeed() const;
+		RecoverySpeed GetBaseRecoverySpeed() const;
 
 	private:
 		/**

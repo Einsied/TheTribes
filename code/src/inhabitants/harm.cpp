@@ -42,7 +42,7 @@ namespace tribes::inhabitant
 
 	};
 
-	Harm::Harm(float base_recovery_speed)
+	Harm::Harm(Harm::RecoverySpeed base_recovery_speed)
 	{
 		// Get identifier from from the global list
 		throw std::runtime_error("Not implemented yet");
@@ -65,7 +65,7 @@ namespace tribes::inhabitant
 		throw std::runtime_error("Not implemented yet");
 	};
 
-	float Harm::GetBaseRecoverySpeed() const
+	Harm::RecoverySpeed Harm::GetBaseRecoverySpeed() const
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
