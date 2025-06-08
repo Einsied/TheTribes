@@ -13,6 +13,7 @@
 
 #include <exception>
 #include <vector>
+#include <shared_mutex>
 
 namespace tribes::good
 {
@@ -23,7 +24,11 @@ namespace tribes::good
 		 * The position within the vector is the identifier of the good.
 		 */
 		std::vector<Good> global_goods;
-		// TODO thread safety mutex
+
+		/**
+		 * @brief The lock to control access to the goods list
+		 */
+		std::shared_mutex global_goods_lock;
 	};
 
 	/**

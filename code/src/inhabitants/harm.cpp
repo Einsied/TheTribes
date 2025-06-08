@@ -13,6 +13,7 @@
 
 #include <exception>
 #include <vector>
+#include <shared_mutex>
 
 namespace tribes::inhabitant
 {
@@ -23,7 +24,11 @@ namespace tribes::inhabitant
 		 * The position within the vector is the identifier of the harm.
 		 */
 		std::vector<Harm> global_harms;
-		// TODO thread safety mutex
+
+		/**
+		 * @brief The lock to control access to the harms list
+		 */
+		std::shared_mutex global_harms_lock;
 	};
 
 	/**
