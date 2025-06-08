@@ -1,0 +1,107 @@
+\chapter{Economy}\label{ch:Economy}
+
+To thrive the \hyperref[ch:Tribes]{tribes} need to produce different
+\hyperref[ch:Good]{goods}. Their production can be roughly divided into the
+gathering of \hyperref[ch:Goods:Nature]{raw inputs}, their refinement and use
+or consumption. This means \hyperref[ch:Goods]{goods} are first gathered then
+transported along a production-chain, before they reach a final destination for
+use or consumption.
+
+\section{Production}\label{ch:Economy:Production}
+
+Production occurs at production-sites. For resource gathering operations these
+are the centers of work. So a \glslink{CopperOre}{copper}-miner will grab their
+\gls{Pick} from the mine and walk to the next resource node containing
+\gls{CopperOre}. After mining the ore he will then deliver the \gls{CopperOre}
+to the mine, were it is stored in the mines output area.
+
+If the \gls{CopperOre} has to be transformed into a \gls{Tool} it is
+transported to the \gls{CopperOre}-input of a smithy. There the smith
+transforms it into a \gls{Tool} using \gls{Coal} from the \gls{Coal}-input.
+Then the smith places it in the output-area of the smithy.
+
+This means that all production-sites have at least one output-area. They may
+have multiple input-areas. These areas can be defined rather freely, by
+modifying the building. For consumption the \hyperref[ch:Goods]{goods} are
+placed in special buildings. \Glspl{Tool}, \gls{Equipment}, \glspl{Weapon} and
+\gls{Armor} are usually transported to special storages, while \gls{Food} or
+\gls{Drink} are either picked up by the
+\hyperref[ch:World:Inhabitants:Sapients]{consumers} directly or at specialized
+buildings.
+
+\section{Logistic}\label{ch:Economy:Production}
+
+The central part of the local economic network is a storage building. It is the
+place workers will search for their resources, before searching in the
+surrounding area. All surplus that can not be stored at the production-sites is
+also transported to the next storage by the workers\footnote{ Not that workers
+	only deliver surplus, once the output-area is completely full. }. To facilitate
+smoother production, porters can be employed to either support the
+production-sites, by carrying \hyperref[ch:Goods]{goods} to the production-site
+or from the production-site to the storage, once the output-area is
+half-filled\footnote{ Note that fetching goods is prioritized over delivering
+	surplus, if the input areas are more than half-empty. }.
+
+If workers or porters fail to find the desired \hyperref[ch:Goods]{goods} at a
+storage building, they will raise demand for this \hyperref[ch:Goods]{good} in
+the storage building. The porters assigned to the storage-building will attempt
+to collect \hyperref[ch:Goods]{goods} that are in high demand first.
+
+Demand is also generated if the amount of \hyperref[ch:Goods]{goods} stored in
+a storage falls below a configurable level. Once the amount of
+\hyperref[ch:Goods]{goods} exceeds a configurable level a surplus
+occurs\footnote{ The surplus level is three-quarter of the total possible
+	storage capacity for each \hyperref[ch;ch:Goods]{good}, by default. }. If a
+storage building nearby has demand for a surplus in another storage building,
+the porters will carry the surplus to the storage with the demand\footnote{
+	This affect both storages, so the porters of the surplus-storage will deliver
+	their surplus to the demand-storage, while the porters of the demand-storage
+	will fetch the demanded resources from the surplus storage. Since porters will
+	prioritize fetching demand over delivering surplus, most
+	\hyperref[ch:Goods]{goods} will fetched instead of delivered.}.
+
+Since porters only transport few resources between neighboring storages, long
+distance logistics is accomplished by traders. The most common one are domestic
+traders. The best way to think of them is long-way porters. These travel
+between two friendly storages, usually owned by the same ruler. Like porters
+they carry resources according to supply and demand. A domestic trader may
+transport \gls{Food} and \gls{Drink} to a military outpost for example. A
+domestic trader can deliver to any storage according to the demands of this
+storage, but only collect from their own storages.
+
+To collect from foreign storages a trade-route has to be established. This
+begins by the posting of trade-offers. Once foreign trade for a
+\hyperref[ch:Goods]{good} has been permitted an exchange value can be set for
+it. If none is set the strength of the demand or size of the surplus determines
+the exchange value. A foreign trader can now supply demanded
+\hyperref[ch:Goods]{goods} and receive surplus goods in exchange. The amount of
+goods bought by the trader is rounded down in favor of the storage if no coins
+are available to cover the difference\footnote{ If coins are available the
+	storage will prefer to pay-out the trader, before accepting coin. }. Together
+with possible competition some trades may be less favorable on the arrival of
+the foreign trader than on assumed on his departure\footnote{ The opposite may
+	also be true.} It is therefore a possible strategy to place a trade
+domestically supplied storage close to a foreign storage to ensure favorable
+prices.
+
+Alternatively exchanges rates can be fixed between two storages by two rules by
+signing a a trade-contract. This is offered at one the storage and fixes the
+exchange-value of a \hyperref[ch:Goods]{good} for a time if a minimal amount of
+resources is delivered. These can be used to ensure a steady supply of
+resources or facilitate cooperation by offering favorable prices them to
+allies.
+
+The last traders are independent traders. These hail from all
+\hyperref[ch:Tribes]{tribes}, but have no allegiance to any ruler, traversing
+the lands on their own. Opposed to the barter exchange of trade-routes they buy
+and sell all kind of \hyperref[ch:Goods]{goods} against \glspl{Coin}\footnote{
+	The rates charged by independent merchants depend on the amount of
+	\hyperref[ch:Goods]{goods} they carry, but do always ensure that the trade is
+	profitable to them. }.
+
+To support porters and traders in their tasks, they are often accompanied by
+\hyperref[ch:World:Inhabitants:Livestock]{livestock} carrying baskets or
+wagons. For more dangerous routes traders are often combined into caravans
+headed by a head-trader and accompanied by warriors\footnote{ Especially
+	independent traders have very powerful escorts to protect against raids and
+	\hyperref[ch:World:Inhabitants:Animals]{wild animals}. }.
