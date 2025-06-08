@@ -1,9 +1,9 @@
 #[[
  @file
- @brief This is a module file to build the goods folder
+ @brief This is a module file to build the inhabitant folder
  
  @author Sebastian Einsiedler
- @date 2025-05-23
+ @date 2025-06-08
  @copyright Copyright (c) 2025
 ]]#
 
@@ -13,8 +13,6 @@ set(source_inhabitants "${source}/inhabitants")
 add_library(Inhabitants)
 target_sources(Inhabitants
 	PRIVATE
-		"${include_inhabitants}/harm.hpp"
-		"${source_inhabitants}/harm.cpp"
 )
 target_include_directories(Inhabitants
 	PRIVATE
@@ -22,6 +20,7 @@ target_include_directories(Inhabitants
 )
 target_link_libraries(Inhabitants
 	PRIVATE
+	Combat
 )
 if(MSVC)
   target_compile_options(Inhabitants PRIVATE /W4 /WX)

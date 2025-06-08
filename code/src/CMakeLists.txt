@@ -28,7 +28,8 @@ set(include_namespaced "${include}/tribes")
 set(source "${CMAKE_CURRENT_SOURCE_DIR}")
 
 add_subdirectory(goods)
-add_subdirectory(inhabitants)
+add_subdirectory(combat)
+#add_subdirectory(inhabitants)
 
 add_executable(Game)
 target_sources(Game

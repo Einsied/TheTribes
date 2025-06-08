@@ -41,12 +41,19 @@ namespace tribes
 	};
 
 	/**
+	 * @brief The namespace for all combat related classes
+	 */
+	namespace combat
+	{
+		class Harm;
+	}
+
+	/**
 	 * @brief The namespace for all inhabitants and related classes
 	 */
 	namespace inhabitant
 	{
 		class Inhabitant;
-		class Harm;
 		class Animal;
 		class Livestock;
 		class Sapient;

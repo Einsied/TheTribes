@@ -9,13 +9,13 @@
  * @copyright Copyright (c) 2025
  */
 
-#include "tribes/inhabitants/harm.hpp"
+#include "tribes/combat/harm.hpp"
 
 #include <exception>
 #include <vector>
 #include <shared_mutex>
 
-namespace tribes::inhabitant
+namespace tribes::combat
 {
 	namespace
 	{

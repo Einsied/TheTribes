@@ -19,7 +19,7 @@
 #include <expected>
 #include <cstdint>
 
-namespace tribes::inhabitant
+namespace tribes::combat
 {
 	/**
 	 * @brief The general class for all harm
