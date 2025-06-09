@@ -46,6 +46,7 @@ namespace tribes
 	namespace combat
 	{
 		class Harm;
+		class Attack:
 	}
 
 	/**
@@ -54,6 +55,7 @@ namespace tribes
 	namespace inhabitant
 	{
 		class Inhabitant;
+		class Species;
 		class Animal;
 		class Livestock;
 		class Sapient;

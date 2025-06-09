@@ -41,6 +41,16 @@ namespace tribes::combat
 		using RecoverySpeed = float;
 
 		/**
+		 * @brief This type measures the resistance to harms
+		 */
+		using Resistance = uint_fast16_t;
+
+		/**
+		 * @brief This type measures the amount of harm done
+		 */
+		using Amount = uint_fast16_t;
+
+		/**
 		 * @brief Get a pointer to a kind of harm by its identifier
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
 		 * 	so ownership managemanent is not necessary
