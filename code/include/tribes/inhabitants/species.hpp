@@ -12,6 +12,10 @@
 #include "tribes/types.hpp"
 #include "tribes/combat/harm.hpp"
 
+#include <vector>
+#include <expected>
+#include <memory>
+
 namespace tribes::inhabitant
 {
 	/**
@@ -26,6 +30,23 @@ namespace tribes::inhabitant
 		 * @brief This type is used to define the movement speed of an inhabitant
 		 */
 		using MovementSpeed = float;
+
+		/**
+		 * @brief This type is used to define how far an inhabitant can see
+		 */
+		using SightRange = MovementSpeed;
+
+		/**
+		 * @brief This type describes the stamina of the species
+		 * @details Stamina is used to run, attack or work if the inhabitant is a sapient.
+		 * It recovers at different rates during the day.
+		 */
+		using Stamina = uint_fast16_t;
+
+		/**
+		 * @brief The speed at which stamina is recovered
+		 */
+		using StaminaRecovery = Stamina;
 
 		/**
 		 * @brief This is used to categorize the species
@@ -78,14 +99,75 @@ namespace tribes::inhabitant
 
 		/**
 		 * @brief Get the base speed for this species
-		 * @details The base speed is often the final 
+		 * @details The base speed is often the final
 		 * @return the base speed
 		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		virtual MovementSpeed GetBaseSpeed() const = 0;
 
-		virtual combat:Harm::Resistance GetBaseResistanceToHarm(combat::Harm::Identifier harm) const = 0;
+		/**
+		 * @brief Gets the base resistance to a harm
+		 * @details This is the raw resistance to harm of this species
+		 * @param harm the that is resisted
+		 * @return the harm resistance
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		virtual combat::Harm::Resistance GetBaseResistanceToHarm(combat::Harm::Identifier harm) const = 0;
 
-		// ToDo add the base attack that represents fist or claws
-		virtual combat::Attack GetBaseAttack()const  = 0
+		/**
+		 * @brief Get the base reduction for a harm of this species
+		 * @details This is the base value subtracted from any harm done to members of this species
+		 * @param harm the harm that is reduced
+		 * @return the harm reduction
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		virtual combat::Harm::Reduction GetBaseHarmReduction(combat::Harm::Identifier harm) const = 0;
+
+		/**
+		 * @brief Get the base recovery speed for a harm for this species
+		 * @details This is the same or a modified value of the base recovery speed of the harm itself
+		 * @param harm the harm that is recovered from
+		 * @return the harm recovery speed
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		virtual combat::Harm::RecoverySpeed GetBaseHarmRecoverySpeed(combat::Harm::Identifier harm) const = 0 :
+
+			/**
+			 * @brief Get the identifier for the base attacks
+			 * @details This represents the attacks by fist, claws, tails fangs etc.
+			 * Most inhabitants will have only one base attack.
+			 * @return the base attacks of the species
+			 */
+			[[nodiscard("Calling a getter without using the value seems to be a mistake.")]] virtual std::vector<combat::Attack::Identifier> GetBaseAttacks() const = 0
+
+			/**
+			 * @brief Get the base sight range of the species
+			 * @details This represent sight in "darkness" so it should be rather short.
+			 * Think a moonless night for the level of dark.
+			 * @return The base sight range
+			 */
+			[[nodiscard("Calling a getter without using the value seems to be a mistake.")]] SightRange GetBaseSightRange() const = 0;
+
+		/**
+		 * @brief Get the sight per brightness
+		 * @details This is the range of sight increasing with brightness.
+		 * So this value is multiplied by a brightness level and added to the base sight to
+		 * get the total potential sight
+		 * @return the sight per brightness
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		SightRange GetSightPerBrightness() const = 0;
+
+		/**
+		 * @brief Get the maximal sight range
+		 * @details This is the maximal sight range even under full brightness.
+		 * It serves as a cap.
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		SightRange MaximalSightRange() const 0;
+
+		// TODO get base stamina and time dependent stamina recovery
+		// the time dependency is meant to support nocturnal behavior
+		// Also give a function to get the rest time
 	};
 };

@@ -73,4 +73,15 @@ namespace tribes
 		class ResourceNode;
 		class Plant;
 	};
+
+	/**
+	 * @brief All classes and variables exclusively associated with the world
+	 */
+	namespace world
+	{
+		/**
+		 * @brief The time of the day in the game
+		 */
+		using time = float;
+	};
 };
