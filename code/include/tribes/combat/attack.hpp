@@ -157,12 +157,14 @@ namespace tribes::combat
 		 * @brief Get the delivery of the attack
 		 * @return the delivery of the attack
 		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		Delivery GetDelivery() const;
 
 		/**
 		 * @brief Get the range of the attack
 		 * @return the range of the attack
 		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		Range GetRange() const;
 
 	private:
