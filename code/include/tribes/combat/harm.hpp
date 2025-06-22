@@ -71,7 +71,7 @@ namespace tribes::combat
 		 * @param base_recovery_speed is the basic recovery speed for this harm
 		 * 	it can later be modified and just gives a general direction.
 		 * 	Since its meaning is not clear hear it does not have a unit.
-		 * @note The good will automatically obtain the next free identifier.
+		 * @note The harm will automatically obtain the next free identifier.
 		 */
 		Harm(RecoverySpeed base_recovery_speed);
 
@@ -118,9 +118,9 @@ namespace tribes::combat
 
 		/**
 		 * @brief Get the basic recovery speed for this harm.
-		 * 	This can later be modified, by species, equipment etc,
-		 *  and just serves as a starting value.
-		 * 	Since its meaning is not clear yet it does not have a unit.
+		 * @details This can later be modified, by species, equipment etc,
+		 * and just serves as a starting value.
+		 * Since its meaning is not clear yet it does not have a unit.
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		RecoverySpeed GetBaseRecoverySpeed() const;
