@@ -11,6 +11,8 @@
 #include "tribes/combat/harm.hpp"
 
 #include <memory>
+#include <expected>
+#include <vector>
 
 namespace tribes::combat
 {
@@ -22,6 +24,11 @@ namespace tribes::combat
 	{
 	public:
 		/**
+		 * @brief This is a global identifier for all harm
+		 */
+		using Identifier = size_t;
+
+		/**
 		 * @brief This is a component of an attack and corresponds to one harm
 		 */
 		struct Component{
@@ -31,27 +38,72 @@ namespace tribes::combat
 			 */
 			float area{0.0};
 			/**
-			 * @brief If the har applies to everyone or only foes
+			 * @brief If the harm applies to everyone or only foes
 			 */
-			bool discriminates{true}
+			bool discriminates{true};
+			/**
+			 * @brief The harm this component does
+			 */
+			Harm::Identifier harm_identifier;
+			/**
+			 * @brief The amount of harm this component does
+			 */
+			Harm::Amount amount;
 		};
 
-		// Todo continue from here
+		/**
+		 * @brief This enumerator describes how the attack is delivered
+		 */
+		enum Delivery{
+			/**
+			 * @brief The attack is delivered directly, from the attacker.
+			 * @details This is the mode that should be chosen for swords, spears, claws, fangs
+			 * and other melee attacks.
+			 */
+			Direct,
+			/**
+			 * @brief The attack is delivered as a projectile
+			 * @details This means the attack is expressed as a projectile and sent
+			 * to the target. This is the appropiate delivery for bows, javelins
+			 * and similar ranged weapons.
+			 */
+			Projectile
+		};
+
+		/**
+		 * @brief This is a global identifier for all attacks
+		 */
+		using Identifier = size_t;
+
+		/**
+		 * @brief The range of an attack
+		 */
+		using Range = float;
+
+		/**
+		 * @brief Get a pointer to an attack by its identifier
+		 * @note The pointer is an observer and the observed object should exist during the entire runtime
+		 * 	so ownership managemanent is not necessary
+		 * @param identifier the identifier
+		 * @return A pointer to the attack associated with the identifier, true if the attack could be found
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		static std::expected<Harm *, bool> GetAttack(Identifier identifier);
 
 		/**
 		 * @brief The default constructor
 		 * @note Deleted, because every attack should do some harm
 		 */
-		Harm() = delete;
+		Attack() = delete;
 
 		/**
 		 * @brief Construct a new attack
 		 * @param components the components of the attack
 		 * @param delivery if it is direct like a spear or a projectile like an arrow
 		 * @param range the range of the attack
-		 * @todo finish from here
+		 * @note The attack will automatically obtain the next free identifier.
 		 */
-		Harm();
+		Attack(std::vector<Component> components, Delivery delivery, Range range);
 
 		/**
 		 * @brief The copy constructor
@@ -83,25 +135,35 @@ namespace tribes::combat
 
 		/**
 		 * @brief The destructor
-		 * @note Since harms are pseudo-globals these function should never be explicitly called.
+		 * @note Since attacks are pseudo-globals these function should never be explicitly called.
 		 */
 		~Harm();
 
 		/**
-		 * @brief Get the Identifier of the current harm
-		 * @return the identifier belonging to this harm
+		 * @brief Get the Identifier of the current attack 
+		 * @return the identifier belonging to this attack
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
 		Identifier GetIdentifier() const;
 
 		/**
-		 * @brief Get the basic recovery speed for this harm.
-		 * 	This can later be modified, by species, equipment etc,
-		 *  and just serves as a starting value.
-		 * 	Since its meaning is not clear yet it does not have a unit.
+		 * @brief Get the components of the attack
+		 * @details Considering that the components of the attack never need to change they are transferred as pointers.
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		RecoverySpeed GetBaseRecoverySpeed() const;
+		std::vector<Component const *> GetComponents() const;
+
+		/**
+		 * @brief Get the delivery of the attack
+		 * @return the delivery of the attack
+		 */
+		Delivery GetDelivery() const;
+
+		/**
+		 * @brief Get the range of the attack
+		 * @return the range of the attack
+		 */
+		Range GetRange() const;
 
 	private:
 		/**
