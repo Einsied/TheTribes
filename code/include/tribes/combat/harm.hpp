@@ -54,6 +54,13 @@ namespace tribes::combat
 		using Amount = uint_fast16_t;
 
 		/**
+		 * @brief How much of a harm is reduced
+		 * @details This refers to mitigation, 
+		 * for example by a thick skin or armor in the case of physical harm
+		 */
+		using Reduction = Amount;
+
+		/**
 		 * @brief Get a pointer to a kind of harm by its identifier
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
 		 * 	so ownership managemanent is not necessary
