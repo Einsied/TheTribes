@@ -42,6 +42,9 @@ namespace tribes::combat
 
 		/**
 		 * @brief This type measures the resistance to harms
+		 * @details In most games this would be called health-points,
+		 * but walls are not really healthy and fear is not a health problem,
+		 * so resistance fits better.
 		 */
 		using Resistance = uint_fast16_t;
 
