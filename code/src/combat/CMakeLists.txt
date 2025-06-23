@@ -26,7 +26,7 @@ target_link_libraries(Combat
 	PRIVATE
 )
 if(MSVC)
-  target_compile_options(Combat PRIVATE /W4 /WX)
+	target_compile_options(Combat PRIVATE /W4 /WX)
 else()
-  target_compile_options(Combat PRIVATE -Wall -Wextra -Wpedantic)
+	target_compile_options(Combat PRIVATE -Wall -Wextra -Wpedantic)
 endif()
