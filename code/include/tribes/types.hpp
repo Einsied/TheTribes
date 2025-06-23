@@ -9,6 +9,8 @@
  * @copyright Copyright (c) 2025
  */
 
+#pragma once
+
 /**
  * @brief The main namespace for the game
  */

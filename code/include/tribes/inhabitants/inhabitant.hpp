@@ -10,6 +10,8 @@
  * @copyright Copyright (c) 2025
  */
 
+#pragma once
+
 #include "tribes/types.hpp"
 
 namespace tribes::inhabitant

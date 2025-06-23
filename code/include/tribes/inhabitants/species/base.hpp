@@ -9,14 +9,17 @@
  * @copyright Copyright (c) 2025
  */
 
+#pragma once
+
 #include "tribes/types.hpp"
 #include "tribes/combat/harm.hpp"
+#include "tribes/combat/attack.hpp"
 
 #include <vector>
 #include <expected>
 #include <memory>
 
-namespace tribes::inhabitant
+namespace tribes::inhabitant::species
 {
 	/**
 	 * @brief This class defines a specific species
@@ -101,7 +104,7 @@ namespace tribes::inhabitant
 		/**
 		 * @brief Get a pointer to a species by its identifier
 		 * @note The pointer is an observer and the observed object should exist during the entire runtime
-		 * 	so ownership managemanent is not necessary
+		 * so ownership managemanent is not necessary
 		 * @param identifier the identifier
 		 * @return A pointer to the harm associated with the identifier, true if the harm could be found
 		 */
@@ -166,7 +169,7 @@ namespace tribes::inhabitant
 		 * @return The base sight range
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		SightRange GetSightRange() const = 0;
+		virtual SightRange GetSightRange() const = 0;
 
 		/**
 		 * @brief Get the sight per brightness
@@ -176,7 +179,7 @@ namespace tribes::inhabitant
 		 * @return the sight per brightness
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		SightRange GetSightPerBrightness() const = 0;
+		virtual SightRange GetSightPerBrightness() const = 0;
 
 		/**
 		 * @brief Get the maximal sight range
@@ -184,7 +187,7 @@ namespace tribes::inhabitant
 		 * It serves as a cap.
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		SightRange MaximalSightRange() const = 0;
+		virtual SightRange MaximalSightRange() const = 0;
 
 		/**
 		 * @brief Get the base stamina of this species
@@ -192,7 +195,7 @@ namespace tribes::inhabitant
 		 * @return the base stamina of this species
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		Stamina GetStamina() const = 0;
+		virtual Stamina GetStamina() const = 0;
 
 		/**
 		 * @brief Get the stamina recovery of this species
@@ -203,7 +206,7 @@ namespace tribes::inhabitant
 		 * @return the stamina recovery
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		StaminaRecovery GetStaminaRecovery(world::Time time) const = 0;
+		virtual StaminaRecovery GetStaminaRecovery(world::Time time) const = 0;
 
 		/**
 		 * @brief Get the times this species prefers to rest
@@ -212,7 +215,7 @@ namespace tribes::inhabitant
 		 * @return the times this species prefers to rest
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		std::vector<RestTime> GetRestTimes() const = 0;
+		virtual std::vector<RestTime> GetRestTimes() const = 0;
 
 		/**
 		 * @brief The destructor
