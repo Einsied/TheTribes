@@ -1,9 +1,7 @@
 /**
  * @file
- * @brief This file declares good
- * @details A good is anything that participates in inactively in the economy.
- * This means things happen to it and it does nothing on its own besides maybe spoil.
- *
+ * @brief This file defines a harm
+ * 
  * @author Sebastian Einsiedler
  * @date 2025-05-17
  * @copyright Copyright (c) 2025

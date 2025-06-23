@@ -2,11 +2,11 @@
  * @file
  * @brief This file declares harms that can be done to inhabitants
  * @details Harm is something that happens to inhabitants creating undesirable consequences.
- * 	Like physical harm having the consequence of death.
- * 	In most games this concept is called damage, but morale-damage seems way less clear than
- * 	morale harm.
- * 	Also most of the game conflicts will involve doing harm to inhabitants not objects,
- * 	so harm was the better term.
+ * Like physical harm having the consequence of death.
+ * In most games this concept is called damage, but morale-damage seems way less clear than
+ * morale harm.
+ * Also most of the game conflicts will involve doing harm to inhabitants not objects,
+ * so harm was the better term.
  *
  * @author Sebastian Einsiedler
  * @date 2025-05-23

@@ -3,6 +3,7 @@
  * @brief This file declares the namespaces and types.
  * @details To give an overview over the different namespaces and
  * classes they are all collected in this file as forward declarations
+ * 
  * @author Sebastian Einsiedler
  * @date 2025-05-17
  * @copyright Copyright (c) 2025
