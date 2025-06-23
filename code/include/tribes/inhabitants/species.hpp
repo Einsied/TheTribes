@@ -49,6 +49,24 @@ namespace tribes::inhabitant
 		using StaminaRecovery = Stamina;
 
 		/**
+		 * @brief The time when members of a species rest
+		 * @details This means they will prefer to sleep during this time.
+		 * @note Keep in mind that time is cyclic. So for humans we expect end < begin,
+		 * since they sleep through midnight.
+		 */
+		struct RestTime
+		{
+			/**
+			 * @details begin of the rest period
+			 */
+			world::Time begin{0};
+			/**
+			 * @brief The end of the rest period
+			 */
+			world::Time end{0};
+		};
+
+		/**
 		 * @brief This is used to categorize the species
 		 * @details Depending on the category a different concrete class with different potential values
 		 * is used.
@@ -103,7 +121,7 @@ namespace tribes::inhabitant
 		 * @return the base speed
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		virtual MovementSpeed GetBaseSpeed() const = 0;
+		virtual MovementSpeed GetSpeed() const = 0;
 
 		/**
 		 * @brief Gets the base resistance to a harm
@@ -112,7 +130,7 @@ namespace tribes::inhabitant
 		 * @return the harm resistance
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		virtual combat::Harm::Resistance GetBaseResistanceToHarm(combat::Harm::Identifier harm) const = 0;
+		virtual combat::Harm::Resistance GetResistanceToHarm(combat::Harm::Identifier harm) const = 0;
 
 		/**
 		 * @brief Get the base reduction for a harm of this species
@@ -121,7 +139,7 @@ namespace tribes::inhabitant
 		 * @return the harm reduction
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		virtual combat::Harm::Reduction GetBaseHarmReduction(combat::Harm::Identifier harm) const = 0;
+		virtual combat::Harm::Reduction GetHarmReduction(combat::Harm::Identifier harm) const = 0;
 
 		/**
 		 * @brief Get the base recovery speed for a harm for this species
@@ -130,23 +148,25 @@ namespace tribes::inhabitant
 		 * @return the harm recovery speed
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		virtual combat::Harm::RecoverySpeed GetBaseHarmRecoverySpeed(combat::Harm::Identifier harm) const = 0 :
+		virtual combat::Harm::RecoverySpeed GetHarmRecoverySpeed(combat::Harm::Identifier harm) const = 0;
 
-			/**
-			 * @brief Get the identifier for the base attacks
-			 * @details This represents the attacks by fist, claws, tails fangs etc.
-			 * Most inhabitants will have only one base attack.
-			 * @return the base attacks of the species
-			 */
-			[[nodiscard("Calling a getter without using the value seems to be a mistake.")]] virtual std::vector<combat::Attack::Identifier> GetBaseAttacks() const = 0
+		/**
+		 * @brief Get the identifier for the base attacks
+		 * @details This represents the attacks by fist, claws, tails fangs etc.
+		 * Most inhabitants will have only one base attack.
+		 * @return the base attacks of the species
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		virtual std::vector<combat::Attack::Identifier> GetAttacks() const = 0;
 
-			/**
-			 * @brief Get the base sight range of the species
-			 * @details This represent sight in "darkness" so it should be rather short.
-			 * Think a moonless night for the level of dark.
-			 * @return The base sight range
-			 */
-			[[nodiscard("Calling a getter without using the value seems to be a mistake.")]] SightRange GetBaseSightRange() const = 0;
+		/**
+		 * @brief Get the base sight range of the species
+		 * @details This represent sight in "darkness" so it should be rather short.
+		 * Think a moonless night for the level of dark.
+		 * @return The base sight range
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		SightRange GetSightRange() const = 0;
 
 		/**
 		 * @brief Get the sight per brightness
@@ -164,10 +184,40 @@ namespace tribes::inhabitant
 		 * It serves as a cap.
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		SightRange MaximalSightRange() const 0;
+		SightRange MaximalSightRange() const = 0;
 
-		// TODO get base stamina and time dependent stamina recovery
-		// the time dependency is meant to support nocturnal behavior
-		// Also give a function to get the rest time
+		/**
+		 * @brief Get the base stamina of this species
+		 * @details This is the amount of stamina a member of this species has
+		 * @return the base stamina of this species
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		Stamina GetStamina() const = 0;
+
+		/**
+		 * @brief Get the stamina recovery of this species
+		 * @details The stamina recovery depends on the time.
+		 * In general species should recover more stamina during their active period.
+		 * So nocturnal species recover more stamina during the night.
+		 * @param time the time of the day
+		 * @return the stamina recovery
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		StaminaRecovery GetStaminaRecovery(world::Time time) const = 0;
+
+		/**
+		 * @brief Get the times this species prefers to rest
+		 * @details The nature of rest might be different between species,
+		 * but most will most likely sleep
+		 * @return the times this species prefers to rest
+		 */
+		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
+		std::vector<RestTime> GetRestTimes() const = 0;
+
+		/**
+		 * @brief The destructor
+		 * @details Virtual classes need a destructor for pointers
+		 */
+		~Species();
 	};
 };

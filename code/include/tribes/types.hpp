@@ -46,8 +46,8 @@ namespace tribes
 	namespace combat
 	{
 		class Harm;
-		class Attack:
-	}
+		class Attack;
+	};
 
 	/**
 	 * @brief The namespace for all inhabitants and related classes
@@ -82,6 +82,6 @@ namespace tribes
 		/**
 		 * @brief The time of the day in the game
 		 */
-		using time = float;
+		using Time = float;
 	};
 };
