@@ -23,7 +23,7 @@ namespace tribes::inhabitant
 	 * @details Since the inhabitants fall into multiple sub categories, this class is virtual,
 	 * and the details are implemented by specific classes for each category.
 	 */
-	class Species
+	class Base
 	{
 	public:
 		/**
@@ -106,7 +106,7 @@ namespace tribes::inhabitant
 		 * @return A pointer to the harm associated with the identifier, true if the harm could be found
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		static std::expected<Species *, bool> GetSpecies(Identifier identifier);
+		static std::expected<Base *, bool> GetSpecies(Identifier identifier);
 
 		/**
 		 * @brief Get the species category
@@ -218,6 +218,6 @@ namespace tribes::inhabitant
 		 * @brief The destructor
 		 * @details Virtual classes need a destructor for pointers
 		 */
-		~Species();
+		~Base();
 	};
 };

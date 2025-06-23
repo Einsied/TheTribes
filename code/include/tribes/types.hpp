@@ -55,8 +55,16 @@ namespace tribes
 	 */
 	namespace inhabitant
 	{
+		/**
+		 * @brief The namespace that contains the different species classes
+		 */
+		namespace species{
+			class Base;
+			class Animal;
+			class Livestock;
+			class Sapient;
+		};
 		class Inhabitant;
-		class Species;
 		class Animal;
 		class Livestock;
 		class Sapient;
