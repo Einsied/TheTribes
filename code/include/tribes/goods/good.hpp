@@ -100,6 +100,6 @@ namespace tribes::good
 		/**
 		 * @brief The pointer to the implementation to hide the details
 		 */
-		std::unique_ptr<Implementation> implementation_{std::make_unique<Implementation>()};
+		std::unique_ptr<Implementation> implementation_;
 	};
 };

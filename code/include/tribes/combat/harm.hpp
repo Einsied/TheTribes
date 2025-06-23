@@ -55,7 +55,7 @@ namespace tribes::combat
 
 		/**
 		 * @brief How much of a harm is reduced
-		 * @details This refers to mitigation, 
+		 * @details This refers to mitigation,
 		 * for example by a thick skin or armor in the case of physical harm
 		 */
 		using Reduction = Amount;
@@ -144,6 +144,6 @@ namespace tribes::combat
 		/**
 		 * @brief The pointer to the implementation to hide the details
 		 */
-		std::unique_ptr<Implementation> implementation_{std::make_unique<Implementation>()};
+		std::unique_ptr<Implementation> implementation_;
 	};
 };

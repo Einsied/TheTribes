@@ -15,6 +15,8 @@ target_sources(Combat
 	PRIVATE
 		"${include_combat}/harm.hpp"
 		"${source_combat}/harm.cpp"
+		"${include_combat}/attack.hpp"
+		"${source_combat}/attack.cpp"
 )
 target_include_directories(Combat
 	PRIVATE

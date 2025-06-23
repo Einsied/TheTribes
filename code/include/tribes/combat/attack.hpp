@@ -31,7 +31,8 @@ namespace tribes::combat
 		/**
 		 * @brief This is a component of an attack and corresponds to one harm
 		 */
-		struct Component{
+		struct Component
+		{
 			/**
 			 * @brief the area affected by the attack given as a radius
 			 * @note An area of 0.0 corresponds to a single target
@@ -54,7 +55,8 @@ namespace tribes::combat
 		/**
 		 * @brief This enumerator describes how the attack is delivered
 		 */
-		enum Delivery{
+		enum Delivery
+		{
 			/**
 			 * @brief The attack is delivered directly, from the attacker.
 			 * @details This is the mode that should be chosen for swords, spears, claws, fangs
@@ -71,11 +73,6 @@ namespace tribes::combat
 		};
 
 		/**
-		 * @brief This is a global identifier for all attacks
-		 */
-		using Identifier = size_t;
-
-		/**
 		 * @brief The range of an attack
 		 */
 		using Range = float;
@@ -88,7 +85,7 @@ namespace tribes::combat
 		 * @return A pointer to the attack associated with the identifier, true if the attack could be found
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
-		static std::expected<Harm *, bool> GetAttack(Identifier identifier);
+		static std::expected<Attack *, bool> GetAttack(Identifier identifier);
 
 		/**
 		 * @brief The default constructor
@@ -110,13 +107,13 @@ namespace tribes::combat
 		 * @param to_copy the instance to copy
 		 * @note Considering the instances are supposed to exist only once we need no copy
 		 */
-		Harm(Harm const &to_copy) = delete;
+		Attack(Attack const &to_copy) = delete;
 
 		/**
 		 * @brief The move constructor
 		 * @param to_move the instance to move
 		 */
-		Harm(Harm const &&to_move);
+		Attack(Attack const &&to_move);
 
 		/**
 		 * @brief The copy assignment operator
@@ -124,23 +121,23 @@ namespace tribes::combat
 		 * @note Considering the instances are supposed to exist only once we need no copy
 		 * @return reference to the new copy
 		 */
-		Harm &operator=(Harm const &to_copy) = delete;
+		Attack &operator=(Attack const &to_copy) = delete;
 
 		/**
 		 * @brief The copy assignment operator
 		 * @param to_move the instance to move
 		 * @return reference to the new object
 		 */
-		Harm &operator=(Harm &&to_move);
+		Attack &operator=(Attack &&to_move);
 
 		/**
 		 * @brief The destructor
 		 * @note Since attacks are pseudo-globals these function should never be explicitly called.
 		 */
-		~Harm();
+		~Attack();
 
 		/**
-		 * @brief Get the Identifier of the current attack 
+		 * @brief Get the Identifier of the current attack
 		 * @return the identifier belonging to this attack
 		 */
 		[[nodiscard("Calling a getter without using the value seems to be a mistake.")]]
@@ -176,6 +173,6 @@ namespace tribes::combat
 		/**
 		 * @brief The pointer to the implementation to hide the details
 		 */
-		std::unique_ptr<Implementation> implementation_{std::make_unique<Implementation>()};
+		std::unique_ptr<Implementation> implementation_;
 	};
 };

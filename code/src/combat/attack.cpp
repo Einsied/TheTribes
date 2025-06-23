@@ -1,13 +1,13 @@
 /**
  * @file
- * @brief This file defines a harm
+ * @brief This file defines an attack
  *
  * @author Sebastian Einsiedler
- * @date 2025-05-17
+ * @date 2025-06-09
  * @copyright Copyright (c) 2025
  */
 
-#include "tribes/combat/harm.hpp"
+#include "tribes/combat/attack.hpp"
 
 #include <exception>
 #include <vector>
@@ -21,49 +21,59 @@ namespace tribes::combat
 		 * @brief This variable stores all the harms in the game.
 		 * The position within the vector is the identifier of the harm.
 		 */
-		std::vector<Harm> global_harms;
+		std::vector<Attack> global_attacks;
 
 		/**
 		 * @brief The lock to control access to the harms list
 		 */
-		std::shared_mutex global_harms_lock;
+		std::shared_mutex global_attacks_lock;
 	};
 
 	/**
 	 * @brief This is the implementation of the class
 	 */
-	class Harm::Implementation
+	class Attack::Implementation
 	{
 	};
 
-	std::expected<Harm *, bool> Harm::GetHarm(Identifier identifier) {
+	std::expected<Attack *, bool> Attack::GetAttack(Identifier identifier) {
 
 	};
 
-	Harm::Harm(Harm::RecoverySpeed base_recovery_speed)
+	Attack::Attack(std::vector<Component> components, Delivery delivery, Range range)
 	{
 		// Get identifier from from the global list
 		throw std::runtime_error("Not implemented yet");
 	};
 
-	Harm::Harm(Harm const &&to_move)
+	Attack::Attack(Attack const &&to_move)
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
 
-	Harm &Harm::operator=(Harm &&to_move)
+	Attack &Attack::operator=(Attack &&to_move)
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
 
-	Harm::~Harm() = default;
+	Attack::~Attack() = default;
 
-	Harm::Identifier Harm::GetIdentifier() const
+	Attack::Identifier Attack::GetIdentifier() const
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
 
-	Harm::RecoverySpeed Harm::GetBaseRecoverySpeed() const
+	std::vector<Attack::Component const *> Attack::GetComponents() const
+	{
+		throw std::runtime_error("Not implemented yet");
+	};
+
+	Attack::Delivery Attack::GetDelivery() const
+	{
+		throw std::runtime_error("Not implemented yet");
+	};
+
+	Attack::Range Attack::GetRange() const
 	{
 		throw std::runtime_error("Not implemented yet");
 	};
