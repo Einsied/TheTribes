@@ -25,9 +25,13 @@ with a focus on their primary duty
 		Tasked with administration and research.
 \end{itemize}
 
-The other two classes are the unexamined,
-which are in the process of joining one of the other classes
-and the servants.
+The other two classes are the unexamined and the servants.
+The unexamined have not yet passed examination,
+which means they can take a wider variety of professions,
+but lack much of the knowledge to do so efficiently.
+They are mostly young and have lower expectations in regards
+to material luxury with exception of \gls{Carousing}.
+
 The servants are the priests of the dragon emperors
 recruited from all other classes and tasked with overseeing the examinations,
 maintaining the temples and casting the dragons magic.
@@ -36,13 +40,13 @@ Every temple of the dragon emperors has three priests to fullfil this roles.
 \begin{longtable}{l l llll l}
 	\toprule
 	Social class     & Unexamined & Black  & White  & Black  & White  & Servants \\
-	                 &            & scales & scales & flames & flames & \\
+	                 &            & scales & scales & flames & flames &          \\
 	\midrule
-	\Gls{Adornments} & Lower \\
-	\Gls{Clothing}   & Lower \\
-	\Gls{Comfort}    & Lower \\
-	\Gls{Carousing}  & Higher  \\
-	\Gls{Dining}     & Lower \\
+	\Gls{Adornments} & Lower      & Medium & High   & Lower  & High   & Lower \\
+	\Gls{Clothing}   & Lower      & Low    & Medium & Low    & High   & Lower \\
+	\Gls{Comfort}    & Lower      & Low    & Low    & Lower  & Medium & Lower \\
+	\Gls{Carousing}  & Higher     & Medium & Medium & Higher & Medium & Lower \\
+	\Gls{Dining}     & Lower      & High   & Low    & Lower  & Medium & Lower \\
 	\bottomrule
 \end{longtable}
 
@@ -59,20 +63,13 @@ leading to an increase in the
 \hyperref[ch:World:ch:World:Inhabitants:Sapients:Humans]{needs}
 for \gls{Food} and \gls{Sleep}.
 
-\begin{longtable}{llllll}
+\begin{longtable}{lllllll}
 	\toprule
-	Profession & Class              & \Gls{Tool}   & Workplace & \Gls{Food} & \Gls{Sleep} \\
+	Profession     & Unexamined & Class       & \Gls{Tool}   & Workplace & \Gls{Food} & \Gls{Sleep} \\
 	\midrule
-	Hunter     & Unexamined, Black scales & \Gls{Weapon} & Improves  & Higher     & Medium      \\
+	Hunter         & Yes        & Black scale & \Gls{Weapon} & Improves  & Higher     & Medium      \\
+	Examiner       & No         & Servant     &              & Required  & Lower      & Higher      \\
+	Priest         & No         & Servant     &              & Required  & Lower      & Higher      \\
+	Warlock        & No         & Servant     & Dragon-staff &           & Lower      & Lower       \\
 	\bottomrule
 \end{longtable}
-% The lowest least productive caste are the unchosen.
-% The unchosen are also useful because they can almost every job,
-%	while the other castes are restricted.
-% They are sent to the examination office and after their study
-% assigned to one of the following classes:
-%	Farmers: Food/production, forestry, farming etc.
-%	Crafters: Mining, masonry, cloth-making, weapon making
-%	Soldiers: Fighting
-%	Scholars: Medicine, musket-making, improving productivity of others
-%
